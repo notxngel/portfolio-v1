@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio | Desarrollador Web</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar">
+      <div class="logo"><i class="fa-solid fa-code"></i> DEV.</div>
+      <ul class="nav-links">
+        <li><a href="#about">Sobre Mí</a></li>
+        <li><a href="#skills">Habilidades</a></li>
+        <li><a href="#projects">Proyectos</a></li>
+      </ul>
+      <a href="#contact" class="btn-contact"
+        >Contactar <i class="fa-solid fa-arrow-right"></i
+      ></a>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero">
+      <div class="hero-content">
+        <p class="greeting">Hola, soy</p>
+        <h1 class="name">Angel Matamoros</h1>
+        <h2 class="role">Desarrollador Full Stack</h2>
+
+        <div class="hero-image-container">
+          <img src="assets/images/angel.png" alt="Angel Matamoros" class="mi-foto" />
+                
+                <!-- Floating Cards based on reference -->
+                <div class="floating-card left-card">
+            <div class="card-icon"><i class="fa-solid fa-star"></i></div>
+            <div class="card-text">
+              <span>Desarrollador Web</span>
+              <p>Creando experiencias únicas</p>
+            </div>
+          </div>
+
+          <div class="floating-card right-card">
+            <h3>Mi Expertise</h3>
+            <div class="skill-meter">
+              <span>Backend</span>
+              <div class="meter">
+                <div class="fill" style="--skill-width: 20%"></div>
+              </div>
+            </div>
+            <div class="skill-meter">
+              <span>Frontend</span>
+              <div class="meter">
+                <div class="fill" style="--skill-width: 80%"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <a href="#projects" class="btn-primary">Mis Proyectos</a>
+      </div>
+    </header>
+
+    <!-- Who Am I Section -->
+    <section id="about" class="about-section">
+      <h2 class="section-title">¿QUIÉN SOY?</h2>
+      <div class="about-container">
+        <div class="about-text">
+          <p>
+            Soy un desarrollador web apasionado, especializado en crear
+            interfaces modernas y funcionales. Me encanta transformar ideas en
+            realidad mediante código.
+          </p>
+          <p>
+            La programación es mi pasión y siempre estoy buscando aprender
+            nuevas tecnologías para mejorar mis habilidades.
+          </p>
+          <a href="#projects" class="btn-secondary">Ver Proyectos</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills-section">
+      <h2 class="section-title">MIS HABILIDADES</h2>
+      <div class="skills-grid">
+        <div class="skill-card html">
+          <i class="fa-brands fa-html5"></i>
+          <span>HTML5</span>
+        </div>
+        <div class="skill-card css">
+          <i class="fa-brands fa-css3-alt"></i>
+          <span>CSS3</span>
+        </div>
+        <div class="skill-card js">
+          <i class="fa-brands fa-js"></i>
+          <span>JavaScript</span>
+        </div>
+        <div class="skill-card git">
+          <i class="fa-brands fa-git-alt"></i>
+          <span>Git</span>
+        </div>
+        <!-- Add more skills as needed -->
+      </div>
+    </section>
+
+    <script src="script.js"></script>
+  </body>
+</html>
