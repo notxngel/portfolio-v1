@@ -15,6 +15,7 @@
 }
 
 body {
+  padding-top: 80px;
   background-color: var(--bg-color);
   color: var(--text-color);
   font-family: var(--font-main);
@@ -304,7 +305,12 @@ ul {
   text-align: center;
   transition: 0.3s;
   border: 1px solid rgba(255, 255, 255, 0.05);
+  display: flex;
+  flex-direction: column; /* Alinea los elementos hacia abajo */
+  align-items: center;    /* Centra el icono y el texto horizontalmente */
+  gap: 1rem;              /* Da espacio entre el icono y el nombre */
 }
+
 
 .skill-card:hover {
   transform: translateY(-5px);
