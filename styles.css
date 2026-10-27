@@ -170,7 +170,9 @@ p{line-height:1.85}
 /* ---------- 6. Stack ---------- */
 .stack{display:grid;grid-template-columns:1.1fr 1fr;gap:80px;align-items:center;background:var(--chalk-deep)}
 .stack-body h2{max-width:560px;margin-bottom:48px}
-.tabs{display:flex;gap:32px;border-bottom:1px solid var(--line);margin-bottom:30px}
+.tabs{display:flex;gap:28px;border-bottom:1px solid var(--line);margin-bottom:30px;overflow-x:auto;scrollbar-width:none}
+.tabs::-webkit-scrollbar{display:none}
+.tabs button{white-space:nowrap}
 .tabs button{position:relative;padding:0 0 14px;background:none;border:0;font-size:9px;font-weight:600;letter-spacing:.19em;text-transform:uppercase;color:var(--ink-soft);transition:color .2s}
 .tabs button::after{content:"";position:absolute;left:0;right:0;bottom:-1px;height:2px;background:var(--oxblood);transform:scaleX(0);transform-origin:left;transition:transform .2s}
 .tabs button[aria-selected="true"]{color:var(--navy)}
@@ -188,6 +190,11 @@ p{line-height:1.85}
 .c-sel{color:var(--camel)}
 .c-prop{color:rgba(245,242,236,.7)}
 .c-val{color:#E3C9A6}
+.c-kw{color:var(--camel)}
+.c-fn{color:#F5F2EC;font-weight:500}
+.tab-list li.is-learning{border-style:dashed;color:var(--ink-soft);display:inline-flex;align-items:center;gap:7px}
+.tab-list li.is-learning::before,.legend-dot{content:"";width:5px;height:5px;border-radius:50%;background:var(--camel);flex-shrink:0}
+.stack-legend{display:flex;align-items:center;gap:8px;margin-top:28px;font-size:8px;letter-spacing:.19em;text-transform:uppercase;color:var(--ink-soft)}
 
 /* ---------- 7. Servicios ---------- */
 .service-list{border-bottom:1px solid var(--line);counter-reset:none}
