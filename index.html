@@ -15,17 +15,19 @@
   <meta property="og:image" content="https://ajmatamoros.dev/img/og-image.png">
   <meta property="og:locale" content="es_US">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="theme-color" content="#1B2638">
+  <meta name="theme-color" content="#0F1724">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500&family=JetBrains+Mono:wght@400;500&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-  <!-- ============ HEADER ============ -->
-  <header class="site-header" id="top">
+  <a href="#contenido" class="skip-link">Saltar al contenido</a>
+
+  <!-- ================= HEADER ================= -->
+  <header class="site-header">
     <a href="#top" class="wordmark" aria-label="AMStudio, inicio">
       <span class="wordmark-name">AMStudio</span>
       <span class="wordmark-sub">Full stack engineer</span>
@@ -41,14 +43,14 @@
 
     <a href="#contacto" class="header-cta">Hablemos</a>
 
-    <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobile-menu">
-      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25"><path d="M3 8h18M3 16h18"/></svg>
+    <button class="menu-toggle" id="menu-toggle" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobile-menu">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25" aria-hidden="true"><path d="M3 8h18M3 16h18"/></svg>
     </button>
   </header>
 
   <div class="mobile-menu" id="mobile-menu" hidden>
-    <button class="menu-close round-button" id="menu-close" aria-label="Cerrar menú">
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25"><path d="M5 5l14 14M19 5L5 19"/></svg>
+    <button class="round-button menu-close" id="menu-close" type="button" aria-label="Cerrar menú">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25" aria-hidden="true"><path d="M5 5l14 14M19 5L5 19"/></svg>
     </button>
     <nav aria-label="Móvil">
       <a href="#trabajo">Trabajo</a>
@@ -59,22 +61,22 @@
     </nav>
   </div>
 
-  <main>
+  <main id="contenido">
 
-    <!-- ============ 1. HERO ============ -->
-    <section class="hero">
-      <div class="hero-image hero-backdrop" aria-hidden="true"></div>
-
-      <div class="hero-top">
-        <p class="eyebrow">Full stack engineer — [CIUDAD]</p>
-        <p class="hero-statement">Construyo aplicaciones web completas: interfaz, servidor, APIs y la infraestructura donde corren.</p>
-        <a href="#trabajo" class="text-link text-link-light">Ver trabajo
-          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25"><path d="M12 4v16M5 13l7 7 7-7"/></svg>
-        </a>
+    <!-- ================= HERO ================= -->
+    <section class="hero" id="top">
+      <div class="hero-main">
+        <div class="hero-copy">
+          <p class="label label-accent">Full stack engineer — [CIUDAD]</p>
+          <p class="hero-statement">Construyo aplicaciones web completas: interfaz, servidor, APIs y la infraestructura donde corren.</p>
+          <a href="#trabajo" class="text-link">Ver trabajo
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25" aria-hidden="true"><path d="M12 4v16M5 13l7 7 7-7"/></svg>
+          </a>
+        </div>
+        <img class="hero-avatar" src="img/angel.png" alt="Avatar de Angel Matamoros con los brazos cruzados" width="454" height="652" fetchpriority="high">
       </div>
 
       <div class="hero-bottom">
-        <img class="hero-avatar" src="img/angel.png" alt="Angel Matamoros, con los brazos cruzados" width="454" height="652" fetchpriority="high">
         <h1 class="hero-name">Angel Matamoros</h1>
         <div class="hero-caption">
           <span>Disponible para proyectos · 2026</span>
@@ -83,171 +85,260 @@
       </div>
     </section>
 
-    <!-- ============ 2. SOBRE MÍ ============ -->
+    <!-- ================= SOBRE MÍ ================= -->
     <section class="about" id="sobre-mi">
       <figure class="about-figure">
-        <img src="img/angel.png" alt="" loading="lazy">
-        <figcaption class="image-caption"><span>01 / Sobre mí</span><span>AMStudio</span></figcaption>
+        <img src="img/angel.png" alt="" width="454" height="652" loading="lazy">
       </figure>
 
-      <div class="about-body section-pad">
-        <div class="section-topline">
-          <p class="eyebrow">Sobre mí</p>
-          <p class="eyebrow eyebrow-muted">Full stack</p>
-        </div>
-        <h2 class="about-title">Del navegador al servidor.</h2>
+      <div class="about-body section">
+        <p class="label label-accent">01 / Sobre mí</p>
+        <h2>Del navegador al servidor.</h2>
         <div class="about-text">
           <p>Soy Angel, desarrollador full stack. Trabajo con JavaScript de punta a punta: interfaces en el navegador, lógica y APIs en Node.js, y el despliegue en servidores Linux.</p>
           <p>Fuera de los proyectos de clientes mantengo mi propio homelab en Fedora: servicios autoalojados, acceso por VPN y seguridad por capas. Es mi laboratorio para aprender infraestructura y seguridad, el camino que sigo hacia el pentesting.</p>
           <a href="https://github.com/notxngel" class="text-link" target="_blank" rel="noopener">Ver GitHub
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25"><path d="M7 17L17 7M8 7h9v9"/></svg>
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg>
           </a>
         </div>
-        <div class="section-bottomline">
-          <p class="eyebrow">Frontend · Backend · Infra</p>
-          <p class="eyebrow">Interés: seguridad web</p>
-        </div>
+        <dl class="about-facts">
+          <div><dt>Enfoque</dt><dd>Frontend · Backend · Infra</dd></div>
+          <div><dt>Interés</dt><dd>Seguridad web</dd></div>
+        </dl>
       </div>
     </section>
 
-    <!-- ============ 3. PROYECTOS DESTACADOS ============ -->
-    <section class="featured" id="trabajo" aria-label="Proyectos destacados">
-      <article class="featured-panel">
-        <div class="featured-image placeholder-dark" aria-hidden="true"></div>
-        <span class="featured-number" aria-hidden="true">01</span>
-        <div class="featured-info">
-          <p class="eyebrow">Proyecto personal — En desarrollo · 2026</p>
-          <h3>Cine</h3>
-          <p class="featured-desc">Aplicación web y para Google TV que unifica mi servidor multimedia: catálogo, solicitudes y descargas en una sola interfaz, con sistema de inicio de sesión propio.</p>
-          <ul class="featured-tags">
-            <li>JavaScript</li><li>Jellyfin API</li><li>Sonarr / Radarr</li><li>Seerr</li><li>Autenticación</li><li>Google TV</li>
-          </ul>
-        </div>
-      </article>
+    <!-- ================= PROYECTOS DESTACADOS ================= -->
+    <section class="featured" id="trabajo" aria-labelledby="featured-title">
+      <div class="section featured-head">
+        <p class="label label-accent">02 / Trabajo</p>
+        <h2 id="featured-title">Proyectos destacados</h2>
+      </div>
 
-      <article class="featured-panel">
-        <div class="featured-image placeholder-dark alt" aria-hidden="true"></div>
-        <span class="featured-number" aria-hidden="true">02</span>
-        <div class="featured-info">
-          <p class="eyebrow">Proyecto personal — 2026</p>
-          <h3>Biblioteca</h3>
-          <p class="featured-desc">Biblioteca de documentación de programación que funciona sin internet, autoalojada en mi homelab y accesible solo por VPN, con búsqueda asistida por IA.</p>
-          <ul class="featured-tags">
-            <li>Autoalojado</li><li>Fedora Linux</li><li>Tailscale</li><li>Búsqueda con IA</li>
-          </ul>
-        </div>
-      </article>
+      <div class="featured-grid">
+        <article class="project">
+          <div class="project-top">
+            <span class="project-number">01</span>
+            <span class="label">Proyecto personal · En desarrollo</span>
+          </div>
+
+          <div class="diagram" role="img" aria-label="Arquitectura de Cine: clientes web y Google TV se conectan a Cine, que gestiona el inicio de sesión y se integra con Jellyfin, Sonarr, Radarr y Seerr.">
+            <div class="tier">
+              <span class="tier-label">Clientes</span>
+              <div class="nodes">
+                <span class="node"><span class="icon" style="--icon:url(img/icons/javascript.svg)"></span>Web</span>
+                <span class="node"><span class="icon" style="--icon:url(img/icons/googletv.svg)"></span>Google TV</span>
+              </div>
+            </div>
+            <div class="tier tier-core">
+              <span class="tier-label">App</span>
+              <div class="nodes"><span class="node node-core">Cine · Login propio</span></div>
+            </div>
+            <div class="tier">
+              <span class="tier-label">Integraciones</span>
+              <div class="nodes">
+                <span class="node"><span class="icon" style="--icon:url(img/icons/jellyfin.svg)"></span>Jellyfin</span>
+                <span class="node"><span class="icon" style="--icon:url(img/icons/sonarr.svg)"></span>Sonarr</span>
+                <span class="node"><span class="icon" style="--icon:url(img/icons/radarr.svg)"></span>Radarr</span>
+                <span class="node">Seerr</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-info">
+            <h3>Cine</h3>
+            <p>Aplicación web y para Google TV que unifica mi servidor multimedia: catálogo, solicitudes y descargas en una sola interfaz, con sistema de inicio de sesión propio.</p>
+            <p class="project-stack">JavaScript · APIs REST · Autenticación</p>
+          </div>
+        </article>
+
+        <article class="project">
+          <div class="project-top">
+            <span class="project-number">02</span>
+            <span class="label">Proyecto personal</span>
+          </div>
+
+          <div class="diagram" role="img" aria-label="Arquitectura de Biblioteca: el navegador entra por la VPN de Tailscale al homelab con Fedora, donde corre Biblioteca con búsqueda asistida por IA.">
+            <div class="tier">
+              <span class="tier-label">Acceso</span>
+              <div class="nodes"><span class="node">Navegador</span></div>
+            </div>
+            <div class="tier">
+              <span class="tier-label">Red</span>
+              <div class="nodes"><span class="node"><span class="icon" style="--icon:url(img/icons/tailscale.svg)"></span>Tailscale · VPN</span></div>
+            </div>
+            <div class="tier">
+              <span class="tier-label">Servidor</span>
+              <div class="nodes"><span class="node"><span class="icon" style="--icon:url(img/icons/fedora.svg)"></span>Homelab · Fedora</span></div>
+            </div>
+            <div class="tier tier-core">
+              <span class="tier-label">App</span>
+              <div class="nodes"><span class="node node-core">Biblioteca · Búsqueda con IA</span></div>
+            </div>
+          </div>
+
+          <div class="project-info">
+            <h3>Biblioteca</h3>
+            <p>Biblioteca de documentación de programación que funciona sin internet, autoalojada en mi homelab y accesible solo por VPN, con búsqueda asistida por IA.</p>
+            <p class="project-stack">Autoalojado · Linux · Redes privadas</p>
+          </div>
+        </article>
+      </div>
     </section>
 
-    <!-- ============ 4. MÁS TRABAJO (CARRUSEL) ============ -->
-    <section class="more-work section-pad" aria-labelledby="more-work-title">
+    <!-- ================= EN DESARROLLO (CARRUSEL) ================= -->
+    <section class="more-work section" aria-labelledby="more-work-title">
       <div class="section-heading">
         <div>
-          <p class="eyebrow eyebrow-gap">Más trabajo</p>
-          <h2 id="more-work-title">En desarrollo</h2>
+          <p class="label label-accent">03 / En desarrollo</p>
+          <h2 id="more-work-title">Lo que estoy construyendo</h2>
         </div>
         <div class="heading-aside">
-          <p>Proyectos que estoy construyendo ahora, de la arquitectura al deploy. Cada uno con su repositorio y su stack.</p>
+          <p>Proyectos en curso, de la arquitectura al deploy. Cada uno con su repositorio y su stack.</p>
           <div class="carousel-controls">
-            <button class="round-button" data-carousel="prev" aria-label="Anterior">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25"><path d="M19 12H5M11 6l-6 6 6 6"/></svg>
+            <button class="round-button" type="button" data-carousel="prev" aria-label="Proyecto anterior">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6"/></svg>
             </button>
-            <button class="round-button" data-carousel="next" aria-label="Siguiente">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            <button class="round-button" type="button" data-carousel="next" aria-label="Proyecto siguiente">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
             </button>
           </div>
         </div>
       </div>
 
-      <div class="carousel" id="carousel" tabindex="0" aria-label="Carrusel de proyectos">
-        <article class="carousel-card">
-          <a href="#" class="carousel-media">
-            <div class="placeholder-image ratio-43" aria-hidden="true"><span>[CAPTURA PROYECTO 3]</span></div>
-            <span class="carousel-index">03</span>
-            <span class="carousel-bar">Ver proyecto
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-            </span>
-          </a>
-          <h3>[PROYECTO 3] — Landing de lanzamiento</h3>
-          <p class="carousel-meta">Concepto · 2026 · [STACK]</p>
+      <div class="carousel" id="carousel" tabindex="0" aria-label="Proyectos en desarrollo">
+        <article class="card">
+          <div class="card-media"><span>[CAPTURA]</span><span class="card-index">01</span></div>
+          <h3>[PROYECTO] — Sitio para músico</h3>
+          <p class="card-meta">Concepto · 2026 · [STACK]</p>
         </article>
-
-        <article class="carousel-card">
-          <a href="#" class="carousel-media">
-            <div class="placeholder-image ratio-34" aria-hidden="true"><span>[CAPTURA PROYECTO 1 — DETALLE]</span></div>
-            <span class="carousel-index">01</span>
-            <span class="carousel-bar">Ver proyecto
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-            </span>
-          </a>
-          <h3>[PROYECTO 1] — Músico</h3>
-          <p class="carousel-meta">Concepto · 2026 · [STACK]</p>
+        <article class="card">
+          <div class="card-media"><span>[CAPTURA]</span><span class="card-index">02</span></div>
+          <h3>[PROYECTO] — Portafolio de fotografía</h3>
+          <p class="card-meta">Concepto · 2026 · [STACK]</p>
         </article>
-
-        <article class="carousel-card">
-          <a href="#" class="carousel-media">
-            <div class="placeholder-image ratio-43" aria-hidden="true"><span>[CAPTURA PROYECTO 2 — DETALLE]</span></div>
-            <span class="carousel-index">02</span>
-            <span class="carousel-bar">Ver proyecto
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-            </span>
-          </a>
-          <h3>[PROYECTO 2] — Fotografía</h3>
-          <p class="carousel-meta">Concepto · 2026 · [STACK]</p>
+        <article class="card">
+          <div class="card-media"><span>[CAPTURA]</span><span class="card-index">03</span></div>
+          <h3>[PROYECTO] — Landing de lanzamiento</h3>
+          <p class="card-meta">Concepto · 2026 · [STACK]</p>
         </article>
-
-        <article class="carousel-card">
-          <div class="carousel-media carousel-media-empty">
-            <div class="placeholder-image ratio-34" aria-hidden="true"><span>Tu proyecto aquí</span></div>
-            <span class="carousel-index">04</span>
-          </div>
-          <h3>Próximo proyecto</h3>
-          <p class="carousel-meta">Agenda abierta · 2026</p>
+        <article class="card card-empty">
+          <div class="card-media"><span>Agenda abierta</span><span class="card-index">04</span></div>
+          <h3>Tu proyecto</h3>
+          <p class="card-meta">Disponible · 2026</p>
         </article>
       </div>
     </section>
 
-    <!-- ============ 5. PROCESO ============ -->
-    <section class="process section-pad" id="proceso">
-      <div class="process-intro">
-        <p class="eyebrow eyebrow-gap">Proceso</p>
-        <h2>Cómo construyo un proyecto.</h2>
-        <p class="process-lede">Control de versiones desde el primer día, vistas previas en cada etapa y un deploy que se puede repetir.</p>
+    <!-- ================= STACK ================= -->
+    <section class="stack section" id="stack" aria-labelledby="stack-title">
+      <div class="section-heading">
+        <div>
+          <p class="label label-accent">04 / Stack</p>
+          <h2 id="stack-title">Tecnologías</h2>
+        </div>
+        <div class="heading-aside">
+          <p>Lo que uso a diario y lo que estoy sumando ahora mismo.</p>
+          <p class="legend"><span class="legend-mark" aria-hidden="true"></span>En aprendizaje activo</p>
+        </div>
       </div>
 
-      <div class="accordion" id="accordion">
+      <div class="stack-groups">
+        <div class="stack-group">
+          <h3 class="label">Frontend</h3>
+          <ul class="tiles">
+            <li class="tile"><span class="icon" style="--icon:url(img/icons/html5.svg)"></span>HTML5</li>
+            <li class="tile"><span class="icon" style="--icon:url(img/icons/css.svg)"></span>CSS</li>
+            <li class="tile"><span class="icon" style="--icon:url(img/icons/javascript.svg)"></span>JavaScript</li>
+            <li class="tile is-learning"><span class="icon" style="--icon:url(img/icons/react.svg)"></span>React</li>
+            <li class="tile is-learning"><span class="icon" style="--icon:url(img/icons/redux.svg)"></span>Redux</li>
+          </ul>
+        </div>
+
+        <div class="stack-group">
+          <h3 class="label">Backend</h3>
+          <ul class="tiles">
+            <li class="tile"><span class="icon" style="--icon:url(img/icons/nodedotjs.svg)"></span>Node.js</li>
+            <li class="tile"><span class="icon-text" aria-hidden="true">{ }</span>APIs REST</li>
+            <li class="tile is-learning"><span class="icon" style="--icon:url(img/icons/express.svg)"></span>Express</li>
+            <li class="tile is-learning"><span class="icon" style="--icon:url(img/icons/postgresql.svg)"></span>PostgreSQL</li>
+          </ul>
+        </div>
+
+        <div class="stack-group">
+          <h3 class="label">Infraestructura</h3>
+          <ul class="tiles">
+            <li class="tile"><span class="icon" style="--icon:url(img/icons/linux.svg)"></span>Linux</li>
+            <li class="tile"><span class="icon" style="--icon:url(img/icons/fedora.svg)"></span>Fedora</li>
+            <li class="tile"><span class="icon" style="--icon:url(img/icons/tailscale.svg)"></span>Tailscale</li>
+            <li class="tile"><span class="icon" style="--icon:url(img/icons/pihole.svg)"></span>Pi-hole</li>
+            <li class="tile"><span class="icon" style="--icon:url(img/icons/netlify.svg)"></span>Netlify</li>
+            <li class="tile"><span class="icon" style="--icon:url(img/icons/vercel.svg)"></span>Vercel</li>
+            <li class="tile"><span class="icon" style="--icon:url(img/icons/github.svg)"></span>GitHub Pages</li>
+          </ul>
+        </div>
+
+        <div class="stack-group">
+          <h3 class="label">Flujo de trabajo</h3>
+          <ul class="tiles">
+            <li class="tile"><span class="icon" style="--icon:url(img/icons/git.svg)"></span>Git</li>
+            <li class="tile"><span class="icon" style="--icon:url(img/icons/github.svg)"></span>GitHub</li>
+            <li class="tile"><span class="icon" style="--icon:url(img/icons/gnubash.svg)"></span>Bash</li>
+            <li class="tile"><span class="icon" style="--icon:url(img/icons/claude.svg)"></span>Claude</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= PROCESO ================= -->
+    <section class="process section" id="proceso" aria-labelledby="process-title">
+      <div class="process-intro">
+        <p class="label label-accent">05 / Proceso</p>
+        <h2 id="process-title">Cómo construyo un proyecto.</h2>
+        <p class="lede">Control de versiones desde el primer día, vistas previas en cada etapa y un deploy que se puede repetir.</p>
+      </div>
+
+      <div class="accordion">
         <div class="accordion-item is-open">
-          <button class="accordion-trigger" aria-expanded="true" aria-controls="step-1" id="step-1-btn">
-            <span class="step-number">01</span><span class="step-title">Requisitos y arquitectura</span>
-            <span class="accordion-icon" aria-hidden="true"></span>
-          </button>
+          <h3>
+            <button class="accordion-trigger" type="button" aria-expanded="true" aria-controls="step-1" id="step-1-btn">
+              <span class="step-number">01</span><span class="step-title">Requisitos y arquitectura</span>
+              <span class="plus" aria-hidden="true"></span>
+            </button>
+          </h3>
           <div class="accordion-panel" id="step-1" role="region" aria-labelledby="step-1-btn">
             <p>Defino qué tiene que hacer la aplicación, qué datos maneja y qué servicios necesita. De ahí sale el stack, la estructura del proyecto y un precio cerrado.</p>
           </div>
         </div>
         <div class="accordion-item">
-          <button class="accordion-trigger" aria-expanded="false" aria-controls="step-2" id="step-2-btn">
-            <span class="step-number">02</span><span class="step-title">Interfaz</span>
-            <span class="accordion-icon" aria-hidden="true"></span>
-          </button>
+          <h3>
+            <button class="accordion-trigger" type="button" aria-expanded="false" aria-controls="step-2" id="step-2-btn">
+              <span class="step-number">02</span><span class="step-title">Interfaz</span>
+              <span class="plus" aria-hidden="true"></span>
+            </button>
+          </h3>
           <div class="accordion-panel" id="step-2" role="region" aria-labelledby="step-2-btn" hidden>
             <p>HTML semántico, CSS responsive y JavaScript para la interacción. Accesible con teclado y lector de pantalla, y probado en móvil desde el inicio.</p>
           </div>
         </div>
         <div class="accordion-item">
-          <button class="accordion-trigger" aria-expanded="false" aria-controls="step-3" id="step-3-btn">
-            <span class="step-number">03</span><span class="step-title">Backend e integraciones</span>
-            <span class="accordion-icon" aria-hidden="true"></span>
-          </button>
+          <h3>
+            <button class="accordion-trigger" type="button" aria-expanded="false" aria-controls="step-3" id="step-3-btn">
+              <span class="step-number">03</span><span class="step-title">Backend e integraciones</span>
+              <span class="plus" aria-hidden="true"></span>
+            </button>
+          </h3>
           <div class="accordion-panel" id="step-3" role="region" aria-labelledby="step-3-btn" hidden>
             <p>Lógica en Node.js, consumo de APIs externas con peticiones HTTP asíncronas, autenticación cuando hace falta y variables de entorno fuera del código.</p>
           </div>
         </div>
         <div class="accordion-item">
-          <button class="accordion-trigger" aria-expanded="false" aria-controls="step-4" id="step-4-btn">
-            <span class="step-number">04</span><span class="step-title">Deploy y mantenimiento</span>
-            <span class="accordion-icon" aria-hidden="true"></span>
-          </button>
+          <h3>
+            <button class="accordion-trigger" type="button" aria-expanded="false" aria-controls="step-4" id="step-4-btn">
+              <span class="step-number">04</span><span class="step-title">Deploy y mantenimiento</span>
+              <span class="plus" aria-hidden="true"></span>
+            </button>
+          </h3>
           <div class="accordion-panel" id="step-4" role="region" aria-labelledby="step-4-btn" hidden>
             <p>Publicación en Netlify, Vercel, GitHub Pages o un servidor Linux propio, con HTTPS y dominio. El repositorio y el código quedan a tu nombre.</p>
           </div>
@@ -255,63 +346,12 @@
       </div>
     </section>
 
-    <!-- ============ 6. STACK ============ -->
-    <section class="stack section-pad" id="stack" aria-labelledby="stack-title">
-      <div class="stack-body">
-        <p class="eyebrow eyebrow-gap">Stack</p>
-        <h2 id="stack-title">Las herramientas con las que trabajo.</h2>
-
-        <div class="tabs" role="tablist" aria-label="Stack técnico">
-          <button role="tab" id="tab-front" aria-selected="true" aria-controls="panel-front">Frontend</button>
-          <button role="tab" id="tab-back" aria-selected="false" aria-controls="panel-back" tabindex="-1">Backend</button>
-          <button role="tab" id="tab-infra" aria-selected="false" aria-controls="panel-infra" tabindex="-1">Infraestructura</button>
-          <button role="tab" id="tab-tools" aria-selected="false" aria-controls="panel-tools" tabindex="-1">Flujo</button>
-        </div>
-
-        <div class="tab-panel" role="tabpanel" id="panel-front" aria-labelledby="tab-front">
-          <p>Interfaces responsive y accesibles con JavaScript moderno: módulos, async/await y consumo de APIs con fetch.</p>
-          <ul class="tab-list"><li>HTML5</li><li>CSS3</li><li>JavaScript ES6+</li><li>Fetch API</li><li class="is-learning">React</li><li class="is-learning">Redux</li></ul>
-        </div>
-        <div class="tab-panel" role="tabpanel" id="panel-back" aria-labelledby="tab-back" hidden>
-          <p>Lógica de servidor en Node.js, integración con APIs REST de terceros y sistemas de inicio de sesión.</p>
-          <ul class="tab-list"><li>Node.js</li><li>APIs REST</li><li>Autenticación</li><li class="is-learning">Express</li><li class="is-learning">PostgreSQL</li></ul>
-        </div>
-        <div class="tab-panel" role="tabpanel" id="panel-infra" aria-labelledby="tab-infra" hidden>
-          <p>Servidor propio en Fedora Linux con servicios autoalojados, acceso privado por VPN, DNS filtrado y antivirus como capas de seguridad.</p>
-          <ul class="tab-list"><li>Fedora Linux</li><li>Tailscale</li><li>Pi-hole</li><li>ClamAV</li><li>Netlify</li><li>Vercel</li><li>GitHub Pages</li></ul>
-        </div>
-        <div class="tab-panel" role="tabpanel" id="panel-tools" aria-labelledby="tab-tools" hidden>
-          <p>Todo vive en Git desde el primer commit, con ramas por cambio. Uso asistentes de IA para acelerar el desarrollo y reviso cada línea que llega a producción.</p>
-          <ul class="tab-list"><li>Git</li><li>GitHub</li><li>Terminal</li><li>Desarrollo asistido con IA</li></ul>
-        </div>
-
-        <p class="stack-legend"><span class="legend-dot" aria-hidden="true"></span>En aprendizaje activo</p>
-      </div>
-
-      <figure class="code-figure" aria-label="Ejemplo de código JavaScript asíncrono">
-        <div class="code-window">
-          <div class="code-bar"><span></span><span></span><span></span><em>api.js</em></div>
-<pre><code><span class="c-kw">export async function</span> <span class="c-fn">getProjects</span>() {
-  <span class="c-kw">try</span> {
-    <span class="c-kw">const</span> res = <span class="c-kw">await</span> <span class="c-fn">fetch</span>(<span class="c-val">`${API_URL}/projects`</span>);
-    <span class="c-kw">if</span> (!res.ok) <span class="c-kw">throw new</span> <span class="c-fn">Error</span>(res.status);
-    <span class="c-kw">return await</span> res.<span class="c-fn">json</span>();
-  } <span class="c-kw">catch</span> (err) {
-    console.<span class="c-fn">error</span>(<span class="c-val">'No se pudo cargar:'</span>, err);
-    <span class="c-kw">return</span> [];
-  }
-}</code></pre>
-        </div>
-        <figcaption class="image-caption"><span>06 / Stack</span><span>JavaScript</span></figcaption>
-      </figure>
-    </section>
-
-    <!-- ============ 7. SERVICIOS ============ -->
-    <section class="services section-pad" id="servicios">
+    <!-- ================= SERVICIOS ================= -->
+    <section class="services section" id="servicios" aria-labelledby="services-title">
       <div class="section-heading">
         <div>
-          <p class="eyebrow eyebrow-gap">Servicios</p>
-          <h2>Paquetes</h2>
+          <p class="label label-accent">06 / Servicios</p>
+          <h2 id="services-title">Paquetes</h2>
         </div>
         <div class="heading-aside">
           <p>Precio cerrado después de definir requisitos. Cada paquete incluye repositorio en Git, versión móvil y deploy.</p>
@@ -324,7 +364,7 @@
             <span class="service-num">01</span>
             <span class="service-name">Sitio web o landing</span>
             <span class="service-desc">Responsive, rápido y con formulario de contacto. Publicado en tu dominio con HTTPS.</span>
-            <span class="service-price"><small>desde</small> $[___]</span>
+            <span class="service-price"><small>desde</small>$[___]</span>
           </a>
         </li>
         <li>
@@ -332,7 +372,7 @@
             <span class="service-num">02</span>
             <span class="service-name">Aplicación web</span>
             <span class="service-desc">Interfaz más lógica de servidor: inicio de sesión, datos y paneles a medida.</span>
-            <span class="service-price"><small>desde</small> $[___]</span>
+            <span class="service-price"><small>desde</small>$[___]</span>
           </a>
         </li>
         <li>
@@ -340,7 +380,7 @@
             <span class="service-num">03</span>
             <span class="service-name">Integraciones y automatización</span>
             <span class="service-desc">Conectar tu sitio con APIs de terceros o automatizar tareas repetitivas.</span>
-            <span class="service-price"><small>desde</small> $[___]</span>
+            <span class="service-price"><small>desde</small>$[___]</span>
           </a>
         </li>
         <li>
@@ -348,63 +388,59 @@
             <span class="service-num">04</span>
             <span class="service-name">Hosting y mantenimiento</span>
             <span class="service-desc">Deploy, dominio, actualizaciones y cambios después de la entrega.</span>
-            <span class="service-price"><small>desde</small> $[___]/mes</span>
+            <span class="service-price"><small>desde</small>$[___]/mes</span>
           </a>
         </li>
       </ol>
     </section>
 
-    <!-- ============ 8. MANIFIESTO ============ -->
-    <section class="manifesto">
-      <p>Código que se entiende, se puede mantener y corre donde tiene que correr. Y si algo falla, sé dónde buscar.</p>
-      <span class="monogram" aria-label="AM">AM</span>
-    </section>
-
-    <!-- ============ 9. FAQ ============ -->
-    <section class="faq section-pad" aria-labelledby="faq-title">
+    <!-- ================= FAQ ================= -->
+    <section class="faq section" aria-labelledby="faq-title">
       <div>
-        <p class="eyebrow eyebrow-gap">Preguntas</p>
+        <p class="label label-accent">07 / Preguntas</p>
         <h2 id="faq-title">Antes de empezar</h2>
       </div>
       <div class="faq-list">
         <details>
-          <summary>¿Con qué tecnologías trabajas?<span class="faq-icon" aria-hidden="true"></span></summary>
+          <summary>¿Con qué tecnologías trabajas?<span class="plus" aria-hidden="true"></span></summary>
           <p>JavaScript en todo el stack: HTML, CSS y JS en el frontend, Node.js en el servidor y Linux para infraestructura. Ahora mismo estoy sumando React, Express y PostgreSQL.</p>
         </details>
         <details>
-          <summary>¿Haces solo frontend o también backend?<span class="faq-icon" aria-hidden="true"></span></summary>
+          <summary>¿Haces solo frontend o también backend?<span class="plus" aria-hidden="true"></span></summary>
           <p>Ambos. Puedo hacer solo la interfaz si ya tienes un backend, o construir la aplicación completa con su servidor e integraciones.</p>
         </details>
         <details>
-          <summary>¿Dónde se aloja el proyecto?<span class="faq-icon" aria-hidden="true"></span></summary>
+          <summary>¿Dónde se aloja el proyecto?<span class="plus" aria-hidden="true"></span></summary>
           <p>Sitios estáticos en Netlify, Vercel o GitHub Pages, que son gratuitos para la mayoría de casos. Aplicaciones con servidor, donde mejor encaje según el proyecto.</p>
         </details>
         <details>
-          <summary>¿Cuánto tarda?<span class="faq-icon" aria-hidden="true"></span></summary>
+          <summary>¿Cuánto tarda?<span class="plus" aria-hidden="true"></span></summary>
           <p>Una landing suele tomar [__] semanas y una aplicación web [__] semanas. Te doy una fecha concreta cuando definimos los requisitos.</p>
         </details>
         <details>
-          <summary>¿El código es mío?<span class="faq-icon" aria-hidden="true"></span></summary>
+          <summary>¿El código es mío?<span class="plus" aria-hidden="true"></span></summary>
           <p>Sí. Al terminar te entrego el repositorio completo y los accesos al hosting y al dominio.</p>
         </details>
       </div>
     </section>
 
-    <!-- ============ 10. CONTACTO ============ -->
-    <section class="contact" id="contacto">
+    <!-- ================= CONTACTO ================= -->
+    <section class="contact" id="contacto" aria-labelledby="contact-title">
       <figure class="contact-figure">
-        <img src="img/angel.png" alt="" loading="lazy">
-        <figcaption class="image-caption"><span>10 / Contacto</span><span>Hablemos</span></figcaption>
+        <img src="img/angel.png" alt="" width="454" height="652" loading="lazy">
       </figure>
 
-      <div class="contact-body section-pad">
-        <p class="eyebrow eyebrow-gap">Contacto</p>
-        <h2>¿Tienes un proyecto?</h2>
-        <p class="contact-lede">Cuéntame qué necesitas construir. Te respondo con preguntas, una propuesta técnica y un precio.</p>
+      <div class="contact-body section">
+        <p class="label label-accent">08 / Contacto</p>
+        <h2 id="contact-title">¿Tienes un proyecto?</h2>
+        <p class="lede">Cuéntame qué necesitas construir. Te respondo con preguntas, una propuesta técnica y un precio.</p>
 
-        <a href="https://wa.me/18622828915" class="button button-chalk" target="_blank" rel="noopener">Escríbeme por WhatsApp
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25"><path d="M7 17L17 7M8 7h9v9"/></svg>
-        </a>
+        <div class="contact-actions">
+          <a href="https://wa.me/18622828915" class="button" target="_blank" rel="noopener">WhatsApp
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg>
+          </a>
+          <a href="mailto:contact@ajmatamoros.dev" class="text-link">contact@ajmatamoros.dev</a>
+        </div>
 
         <form class="contact-form" id="contact-form" novalidate>
           <div class="field">
@@ -420,8 +456,8 @@
             <textarea id="f-msg" name="mensaje" rows="4" required></textarea>
           </div>
           <div class="form-footer">
-            <button type="submit" class="text-link text-link-light">Enviar
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            <button type="submit" class="text-link">Enviar
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
             </button>
             <p class="form-status" id="form-status" role="status"></p>
           </div>
@@ -430,26 +466,25 @@
     </section>
   </main>
 
-  <!-- ============ 11. FOOTER ============ -->
+  <!-- ================= FOOTER ================= -->
   <footer class="site-footer">
     <p class="footer-wordmark" aria-hidden="true">AMStudio</p>
     <div class="footer-grid">
       <div>
-        <p class="eyebrow footer-label">Estudio</p>
+        <p class="label label-accent">Estudio</p>
         <p>Desarrollo full stack freelance por Angel Matamoros.</p>
       </div>
       <div>
-        <p class="eyebrow footer-label">Navegación</p>
+        <p class="label label-accent">Navegación</p>
         <ul>
           <li><a href="#trabajo">Trabajo</a></li>
           <li><a href="#stack">Stack</a></li>
           <li><a href="#servicios">Servicios</a></li>
-          <li><a href="#proceso">Proceso</a></li>
           <li><a href="#contacto">Contacto</a></li>
         </ul>
       </div>
       <div>
-        <p class="eyebrow footer-label">Redes</p>
+        <p class="label label-accent">Redes</p>
         <ul>
           <li><a href="https://github.com/notxngel" target="_blank" rel="noopener">GitHub</a></li>
           <li><a href="#">LinkedIn [LINK]</a></li>
@@ -457,8 +492,8 @@
         </ul>
       </div>
       <div>
-        <p class="eyebrow footer-label">Email</p>
-        <a href="mailto:contact@ajmatamoros.dev" class="footer-email">contact@ajmatamoros.dev</a>
+        <p class="label label-accent">Email</p>
+        <a href="mailto:contact@ajmatamoros.dev">contact@ajmatamoros.dev</a>
       </div>
     </div>
     <div class="footer-baseline">

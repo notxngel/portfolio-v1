@@ -1,4 +1,4 @@
-/* AMStudio — menú, acordeón, tabs, carrusel y formulario */
+/* AMStudio — menú móvil, acordeón, carrusel y formulario */
 
 // ---------- Menú móvil ----------
 const menu = document.getElementById('mobile-menu');
@@ -15,8 +15,13 @@ function setMenu(open) {
 menuToggle.addEventListener('click', () => setMenu(true));
 menuClose.addEventListener('click', () => setMenu(false));
 menu.querySelectorAll('a').forEach(link => link.addEventListener('click', () => setMenu(false)));
-document.addEventListener('keydown', e => {
-  if (e.key === 'Escape' && !menu.hidden) setMenu(false);
+document.addEventListener('keydown', event => {
+  if (event.key === 'Escape' && !menu.hidden) setMenu(false);
+});
+
+// Si la pantalla crece con el menú abierto, ciérralo
+matchMedia('(min-width: 901px)').addEventListener('change', event => {
+  if (event.matches && !menu.hidden) setMenu(false);
 });
 
 // ---------- Acordeón (Proceso) ----------
@@ -24,10 +29,9 @@ const accordionItems = document.querySelectorAll('.accordion-item');
 
 accordionItems.forEach(item => {
   const trigger = item.querySelector('.accordion-trigger');
-  const panel = item.querySelector('.accordion-panel');
 
   trigger.addEventListener('click', () => {
-    const isOpen = item.classList.contains('is-open');
+    const wasOpen = item.classList.contains('is-open');
 
     // Solo un paso abierto a la vez
     accordionItems.forEach(other => {
@@ -36,32 +40,11 @@ accordionItems.forEach(item => {
       other.querySelector('.accordion-panel').hidden = true;
     });
 
-    if (!isOpen) {
+    if (!wasOpen) {
       item.classList.add('is-open');
       trigger.setAttribute('aria-expanded', 'true');
-      panel.hidden = false;
+      item.querySelector('.accordion-panel').hidden = false;
     }
-  });
-});
-
-// ---------- Tabs (Stack) ----------
-const tabs = Array.from(document.querySelectorAll('[role="tab"]'));
-
-function selectTab(tab) {
-  tabs.forEach(t => {
-    const selected = t === tab;
-    t.setAttribute('aria-selected', String(selected));
-    t.tabIndex = selected ? 0 : -1;
-    document.getElementById(t.getAttribute('aria-controls')).hidden = !selected;
-  });
-  tab.focus();
-}
-
-tabs.forEach((tab, i) => {
-  tab.addEventListener('click', () => selectTab(tab));
-  tab.addEventListener('keydown', e => {
-    if (e.key === 'ArrowRight') selectTab(tabs[(i + 1) % tabs.length]);
-    if (e.key === 'ArrowLeft') selectTab(tabs[(i - 1 + tabs.length) % tabs.length]);
   });
 });
 
@@ -70,22 +53,20 @@ const carousel = document.getElementById('carousel');
 
 document.querySelectorAll('[data-carousel]').forEach(button => {
   button.addEventListener('click', () => {
-    const card = carousel.querySelector('.carousel-card');
+    const card = carousel.querySelector('.card');
     const gap = parseFloat(getComputedStyle(carousel).columnGap) || 0;
-    const step = card.offsetWidth + gap;
     const direction = button.dataset.carousel === 'next' ? 1 : -1;
-    carousel.scrollBy({ left: step * direction, behavior: 'smooth' });
+    carousel.scrollBy({ left: (card.offsetWidth + gap) * direction, behavior: 'smooth' });
   });
 });
 
 // ---------- Formulario de contacto ----------
-// GitHub Pages no procesa formularios, así que el mensaje se abre en el
-// correo del visitante. Si migras a Netlify, puedes usar Netlify Forms.
+// GitHub Pages no procesa formularios: el mensaje se abre en el correo del visitante.
 const form = document.getElementById('contact-form');
 const status = document.getElementById('form-status');
 
-form.addEventListener('submit', e => {
-  e.preventDefault();
+form.addEventListener('submit', event => {
+  event.preventDefault();
 
   if (!form.checkValidity()) {
     status.textContent = 'Completa los tres campos, por favor.';
