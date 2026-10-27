@@ -1,296 +1,472 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Angel Matamoros | Desarrollador Web Full Stack — Portfolio</title>
-    <meta name="description" content="Portfolio profesional de Angel Matamoros, desarrollador web Full Stack. Diseño y desarrollo de interfaces modernas, responsivas y experiencias digitales únicas con HTML, CSS y JavaScript." />
-    <meta name="author" content="Angel Matamoros" />
-    <meta name="keywords" content="Angel Matamoros, desarrollador web, full stack developer, portfolio, diseño web, HTML, CSS, JavaScript, freelance, AM Studio, ajmatamoros" />
-    <meta name="robots" content="index, follow" />
-    <link rel="canonical" href="https://ajmatamoros.dev/" />
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AMStudio — Angel Matamoros | Diseño y desarrollo web freelance</title>
+  <meta name="description" content="AMStudio: sitios web editoriales hechos a mano para fotógrafos, músicos y creativos. Diseño y desarrollo web freelance por Angel Matamoros.">
+  <meta name="author" content="Angel Matamoros">
+  <link rel="canonical" href="https://ajmatamoros.dev/">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://ajmatamoros.dev/">
+  <meta property="og:site_name" content="AMStudio — Angel Matamoros">
+  <meta property="og:title" content="AMStudio — Diseño y desarrollo web freelance">
+  <meta property="og:description" content="Sitios web editoriales hechos a mano para fotógrafos, músicos y creativos.">
+  <meta property="og:image" content="https://ajmatamoros.dev/img/og-image.png">
+  <meta property="og:locale" content="es_US">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#1B2638">
 
-    <!-- Open Graph (Facebook, LinkedIn) -->
-    <meta property="og:title" content="Angel Matamoros | Desarrollador Web Full Stack" />
-    <meta property="og:description" content="Diseño y desarrollo de experiencias web modernas, funcionales y visualmente impactantes." />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://ajmatamoros.dev/" />
-    <meta property="og:image" content="https://ajmatamoros.dev/assets/images/angel Background Removed.png" />
-    <meta property="og:image:alt" content="Angel Matamoros — Desarrollador Web Full Stack" />
-    <meta property="og:locale" content="es_HN" />
-    <meta property="og:site_name" content="AMStudio — Angel Matamoros" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
 
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Angel Matamoros | Desarrollador Web Full Stack" />
-    <meta name="twitter:description" content="Diseño y desarrollo de experiencias web modernas, funcionales y visualmente impactantes." />
-    <meta name="twitter:image" content="https://ajmatamoros.dev/assets/images/angel Background Removed.png" />
+  <!-- ============ HEADER ============ -->
+  <header class="site-header" id="top">
+    <a href="#top" class="wordmark" aria-label="AMStudio, inicio">
+      <span class="wordmark-name">AMStudio</span>
+      <span class="wordmark-sub">Web developer · Freelance</span>
+    </a>
 
-    <!-- JSON-LD Structured Data -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Person",
-      "name": "Angel Matamoros",
-      "alternateName": "Angel Josue Matamoros Miranda",
-      "url": "https://ajmatamoros.dev",
-      "image": "https://ajmatamoros.dev/assets/images/angel Background Removed.png",
-      "jobTitle": "Desarrollador Web Full Stack",
-      "worksFor": {
-        "@type": "Organization",
-        "name": "AM Studio"
-      },
-      "sameAs": [
-        "https://github.com/notxngel"
-      ],
-      "knowsAbout": ["HTML5", "CSS3", "JavaScript", "Git", "Diseño Web", "Desarrollo Frontend"],
-      "email": "contact@ajmatamoros.dev"
-    }
-    </script>
-
-    <!-- Favicon -->
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💻</text></svg>" />
-
-    <!-- Preconnect for faster font loading -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-    />
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <!-- Navigation -->
-    <nav class="navbar" id="navbar" aria-label="Navegación principal">
-      <a href="#" class="logo" aria-label="AMStudio — Inicio"><i class="fa-solid fa-code"></i> AMStudio.</a>
-      <ul class="nav-links" id="nav-links">
-        <li><a href="#about">Sobre Mí</a></li>
-        <li><a href="#skills">Habilidades</a></li>
-        <li><a href="#projects">Proyectos</a></li>
-        <li><a href="#contact">Contacto</a></li>
-      </ul>
-      <div class="nav-actions">
-        <button class="lang-toggle" id="lang-toggle" aria-label="Cambiar idioma">
-          <span class="lang-es active">ES</span>
-          <span class="lang-divider">|</span>
-          <span class="lang-en">EN</span>
-        </button>
-        <a href="#contact" class="btn-contact desktop-only"
-          >Contactar <i class="fa-solid fa-arrow-right"></i
-        ></a>
-        <button class="hamburger" id="hamburger" aria-label="Abrir menú de navegación" aria-controls="nav-links" aria-expanded="false">
-          <span class="bar"></span>
-          <span class="bar"></span>
-          <span class="bar"></span>
-        </button>
-      </div>
+    <nav class="main-nav" aria-label="Principal">
+      <a href="#trabajo">Trabajo</a>
+      <a href="#servicios">Servicios</a>
+      <a href="#proceso">Proceso</a>
+      <a href="#sobre-mi">Sobre mí</a>
+      <a href="#contacto">Contacto</a>
     </nav>
 
-    <!-- Hero Section -->
-    <header class="hero" id="hero">
-      <!-- Animated particles canvas -->
-      <canvas id="hero-particles" aria-hidden="true"></canvas>
+    <a href="#contacto" class="header-cta">Hablemos</a>
 
-      <div class="hero-content">
-        <div class="hero-badge" data-reveal>
-          <i class="fa-solid fa-rocket"></i> Disponible para proyectos
-        </div>
-        <p class="greeting" data-reveal data-delay="1">Hola, soy</p>
-        <h1 class="name" data-reveal data-delay="1">Angel Matamoros</h1>
-        <h2 class="role" data-reveal data-delay="2">
-          <span id="typing-text"></span><span class="cursor-blink">|</span>
-        </h2>
-        <p class="subrole" data-reveal data-delay="2">Creando experiencias digitales que importan.</p>
+    <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobile-menu">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25"><path d="M3 8h18M3 16h18"/></svg>
+    </button>
+  </header>
 
-        <div class="hero-image-wrapper" data-reveal data-delay="3">
-          <div class="hero-image-bg"></div>
-          <img src="assets/images/angel Background Removed.png" alt="Angel Matamoros" class="hero-avatar" width="400" height="450" />
-          
-          <!-- Tech Badges -->
-          <div class="tech-badge-orbit tb-html"><i class="fa-brands fa-html5"></i></div>
-          <div class="tech-badge-orbit tb-css"><i class="fa-brands fa-css3-alt"></i></div>
-          <div class="tech-badge-orbit tb-js"><i class="fa-brands fa-js"></i></div>
-          <div class="tech-badge-orbit tb-git"><i class="fa-brands fa-git-alt"></i></div>
-        </div>
+  <div class="mobile-menu" id="mobile-menu" hidden>
+    <button class="menu-close round-button" id="menu-close" aria-label="Cerrar menú">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25"><path d="M5 5l14 14M19 5L5 19"/></svg>
+    </button>
+    <nav aria-label="Móvil">
+      <a href="#trabajo">Trabajo</a>
+      <a href="#servicios">Servicios</a>
+      <a href="#proceso">Proceso</a>
+      <a href="#sobre-mi">Sobre mí</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </div>
 
-        <div class="hero-cta" data-reveal data-delay="3">
-          <a href="#projects" class="btn-primary">
-            <i class="fa-solid fa-folder-open"></i> Mis Proyectos
-          </a>
-          <a href="#contact" class="btn-secondary">
-            <i class="fa-solid fa-paper-plane"></i> Hablemos
-          </a>
-        </div>
+  <main>
+
+    <!-- ============ 1. HERO ============ -->
+    <section class="hero">
+      <!-- Cuando tengas foto o captura para el hero, añádela aquí:
+           <img class="hero-image" src="img/hero.jpg" alt="..."> -->
+      <div class="hero-image hero-placeholder" aria-hidden="true"></div>
+
+      <div class="hero-top">
+        <p class="eyebrow">Desarrollo web — [CIUDAD]</p>
+        <p class="hero-statement">Sitios web editoriales para fotógrafos, músicos y creativos que quieren verse como un estudio.</p>
+        <a href="#trabajo" class="text-link text-link-light">Ver trabajo
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25"><path d="M12 4v16M5 13l7 7 7-7"/></svg>
+        </a>
       </div>
 
-      <!-- Scroll prompt -->
-      <a href="#about" class="scroll-prompt" aria-label="Desplazarse hacia abajo">
-        <span>Descubre más</span>
-        <div class="scrolling-arrows">
-          <i class="fa-solid fa-chevron-down"></i>
-          <i class="fa-solid fa-chevron-down"></i>
+      <div class="hero-bottom">
+        <h1 class="hero-name">Angel Matamoros</h1>
+        <div class="hero-caption">
+          <span>Disponible para proyectos · 2026</span>
+          <span>HTML · CSS · JavaScript</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 2. SOBRE MÍ ============ -->
+    <section class="about" id="sobre-mi">
+      <figure class="about-figure">
+        <img src="img/angel.png" alt="Retrato de Angel Matamoros" loading="lazy">
+        <figcaption class="image-caption"><span>01 / Sobre mí</span><span>AMStudio</span></figcaption>
+      </figure>
+
+      <div class="about-body section-pad">
+        <div class="section-topline">
+          <p class="eyebrow">Sobre mí</p>
+          <p class="eyebrow eyebrow-muted">Est. 2026</p>
+        </div>
+        <h2 class="about-title">Un estudio de una persona, con trato directo.</h2>
+        <div class="about-text">
+          <p>Soy Angel, desarrollador web. Diseño y construyo sitios a mano, línea por línea, sin plantillas genéricas ni constructores pesados. Así cada página carga rápido y se ve como tu trabajo, no como el de todos.</p>
+          <p>Trabajo sobre todo con creativos: gente cuyo trabajo entra por los ojos y necesita un sitio que lo deje respirar. Hablas conmigo desde el brief hasta la entrega.</p>
+          <a href="https://github.com/notxngel" class="text-link" target="_blank" rel="noopener">Ver GitHub
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25"><path d="M7 17L17 7M8 7h9v9"/></svg>
+          </a>
+        </div>
+        <div class="section-bottomline">
+          <p class="eyebrow">HTML · CSS · JS</p>
+          <p class="eyebrow">Enfocado en creativos</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 3. PROYECTOS DESTACADOS ============ -->
+    <section class="featured" id="trabajo" aria-label="Proyectos destacados">
+      <a href="#" class="featured-panel" aria-label="[PROYECTO 1] — músico">
+        <!-- <img src="img/proyecto-musico.jpg" alt="..."> -->
+        <div class="featured-image placeholder-image placeholder-dark" aria-hidden="true"><span>[CAPTURA PROYECTO 1]</span></div>
+        <span class="featured-number">01</span>
+        <div class="featured-info">
+          <div>
+            <p class="eyebrow">Concepto — Músico · 2026</p>
+            <h3>[PROYECTO 1]</h3>
+          </div>
+          <span class="round-button round-button-light" aria-hidden="true">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25"><path d="M7 17L17 7M8 7h9v9"/></svg>
+          </span>
         </div>
       </a>
-    </header>
 
-    <!-- Who Am I Section -->
-    <section id="about" class="about-section">
-      <h2 class="section-title" data-reveal>¿QUIÉN SOY?</h2>
-      <div class="about-container">
-        <div class="about-stats" data-reveal>
-          <div class="stat-item">
-            <span class="stat-number" data-count="5">0</span><span class="stat-plus">+</span>
-            <p>Proyectos</p>
+      <a href="#" class="featured-panel" aria-label="[PROYECTO 2] — fotografía">
+        <!-- <img src="img/proyecto-fotografia.jpg" alt="..."> -->
+        <div class="featured-image placeholder-image placeholder-dark alt" aria-hidden="true"><span>[CAPTURA PROYECTO 2]</span></div>
+        <span class="featured-number">02</span>
+        <div class="featured-info">
+          <div>
+            <p class="eyebrow">Concepto — Fotografía · 2026</p>
+            <h3>[PROYECTO 2]</h3>
           </div>
-          <div class="stat-item">
-            <span class="stat-number" data-count="4">0</span><span class="stat-plus">+</span>
-            <p>Tecnologías</p>
-          </div>
-          <div class="stat-item">
-            <span class="stat-number" data-count="100">0</span><span class="stat-plus">%</span>
-            <p>Compromiso</p>
-          </div>
+          <span class="round-button round-button-light" aria-hidden="true">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25"><path d="M7 17L17 7M8 7h9v9"/></svg>
+          </span>
         </div>
-        <div class="about-text">
-          <p data-reveal>
-            Soy un desarrollador web apasionado, especializado en crear
-            interfaces modernas y funcionales. Me encanta transformar ideas en
-            realidad mediante código.
-          </p>
-          <p data-reveal>
-            La programación es mi pasión y siempre estoy buscando aprender
-            nuevas tecnologías para mejorar mis habilidades.
-          </p>
-        </div>
-      </div>
+      </a>
     </section>
 
-    <!-- Skills Section -->
-    <section id="skills" class="skills-section">
-      <h2 class="section-title" data-reveal>MIS HABILIDADES</h2>
-      <div class="skills-grid">
-        <div class="skill-card glass-card html" data-reveal>
-          <div class="skill-icon-wrap">
-            <i class="fa-brands fa-html5"></i>
-          </div>
-          <span>HTML5</span>
+    <!-- ============ 4. MÁS TRABAJO (CARRUSEL) ============ -->
+    <section class="more-work section-pad" aria-labelledby="more-work-title">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow eyebrow-gap">Más trabajo</p>
+          <h2 id="more-work-title">Proyectos en curso</h2>
         </div>
-        <div class="skill-card glass-card css" data-reveal data-delay="1">
-          <div class="skill-icon-wrap">
-            <i class="fa-brands fa-css3-alt"></i>
-          </div>
-          <span>CSS3</span>
-        </div>
-        <div class="skill-card glass-card js" data-reveal data-delay="2">
-          <div class="skill-icon-wrap">
-            <i class="fa-brands fa-js"></i>
-          </div>
-          <span>JavaScript</span>
-        </div>
-        <div class="skill-card glass-card git" data-reveal data-delay="3">
-          <div class="skill-icon-wrap">
-            <i class="fa-brands fa-git-alt"></i>
-          </div>
-          <span>Git</span>
-        </div>
-      </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section id="projects" class="projects-section">
-      <h2 class="section-title" data-reveal>PROYECTO DESTACADO</h2>
-      <div class="projects-single-container" data-reveal>
-        <div class="project-card glass-card featured-project">
-          <div class="project-image">
-            <i class="fa-solid fa-gift" style="font-size: 3rem; color: rgba(255,255,255,0.2); position: absolute;"></i>
-            <img src="assets/images/wedding-template.png" alt="Invitación de Boda Digital — Proyecto de AM Studio" loading="lazy" width="800" height="450" style="position: relative; z-index: 1;">
-          </div>
-          <div class="project-info">
-            <div class="project-label">
-              <i class="fa-solid fa-fire"></i> Destacado
-            </div>
-            <h3>Invitación Digital Interactiva</h3>
-            <p>
-              Desarrollo de una landing page personalizada para eventos, enfocada en la experiencia de usuario (UX). 
-              Incluye animaciones fluidas, diseño responsivo y una estética elegante.
-            </p>
-            <div class="project-tags">
-              <span>HTML5</span>
-              <span>CSS3</span>
-              <span>JS</span>
-              <span>Responsive</span>
-            </div>
-            <div class="project-links">
-              <a href="https://github.com/notxngel/wedding-invite-template" target="_blank" rel="noopener noreferrer" class="btn-link">
-                <i class="fa-brands fa-github"></i> Código
-              </a>
-              <a href="https://notxngel.github.io/wedding-invite-template/" target="_blank" rel="noopener noreferrer" class="btn-link">
-                <i class="fa-solid fa-arrow-up-right-from-square"></i> Demo
-              </a>
-            </div>
+        <div class="heading-aside">
+          <p>Conceptos diseñados y construidos de principio a fin, pensados para el tipo de cliente con el que trabajo.</p>
+          <div class="carousel-controls">
+            <button class="round-button" data-carousel="prev" aria-label="Anterior">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25"><path d="M19 12H5M11 6l-6 6 6 6"/></svg>
+            </button>
+            <button class="round-button" data-carousel="next" aria-label="Siguiente">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </button>
           </div>
         </div>
       </div>
-    </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact-section">
-      <h2 class="section-title" data-reveal>CONTACTO</h2>
-      <p class="contact-subtitle" data-reveal>¿Tienes una idea en mente? ¡Hablemos!</p>
-      <div class="contact-cards" data-reveal>
-        <a href="mailto:contact@ajmatamoros.dev" class="contact-card glass-card">
-          <div class="contact-card-icon">
-            <i class="fa-regular fa-envelope"></i>
-          </div>
-          <h3>Email</h3>
-          <p>contact@ajmatamoros.dev</p>
-        </a>
-        <a href="https://wa.me/+18622828915" target="_blank" rel="noopener noreferrer" class="contact-card glass-card">
-          <div class="contact-card-icon">
-            <i class="fa-brands fa-whatsapp"></i>
-          </div>
-          <h3>WhatsApp</h3>
-          <p>Envíame un mensaje</p>
-        </a>
-        <a href="https://github.com/notxngel" target="_blank" rel="noopener noreferrer" class="contact-card glass-card">
-          <div class="contact-card-icon">
-            <i class="fa-brands fa-github"></i>
-          </div>
-          <h3>GitHub</h3>
-          <p>@notxngel</p>
-        </a>
-      </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="site-footer">
-      <div class="footer-container">
-        <div class="footer-brand">
-          <a href="#" class="logo"><i class="fa-solid fa-code"></i> AMStudio.</a>
-          <p>Diseño & Desarrollo Web</p>
-        </div>
-        <div class="footer-socials">
-          <a href="https://github.com/notxngel" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-            <i class="fa-brands fa-github"></i>
+      <div class="carousel" id="carousel" tabindex="0" aria-label="Carrusel de proyectos">
+        <article class="carousel-card">
+          <a href="#" class="carousel-media">
+            <div class="placeholder-image ratio-43" aria-hidden="true"><span>[CAPTURA PROYECTO 3]</span></div>
+            <span class="carousel-index">03</span>
+            <span class="carousel-bar">Ver proyecto
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </span>
           </a>
-          <a href="https://wa.me/+18622828915" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
-            <i class="fa-brands fa-whatsapp"></i>
+          <h3>[PROYECTO 3] — Landing de lanzamiento</h3>
+          <p class="carousel-meta">Concepto · 2026 · HTML / CSS / JS</p>
+        </article>
+
+        <article class="carousel-card">
+          <a href="#" class="carousel-media">
+            <div class="placeholder-image ratio-34" aria-hidden="true"><span>[CAPTURA PROYECTO 1 — DETALLE]</span></div>
+            <span class="carousel-index">01</span>
+            <span class="carousel-bar">Ver proyecto
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </span>
           </a>
-          <a href="mailto:contact@ajmatamoros.dev" aria-label="Email">
-            <i class="fa-regular fa-envelope"></i>
+          <h3>[PROYECTO 1] — Músico</h3>
+          <p class="carousel-meta">Concepto · 2026 · HTML / CSS / JS</p>
+        </article>
+
+        <article class="carousel-card">
+          <a href="#" class="carousel-media">
+            <div class="placeholder-image ratio-43" aria-hidden="true"><span>[CAPTURA PROYECTO 2 — DETALLE]</span></div>
+            <span class="carousel-index">02</span>
+            <span class="carousel-bar">Ver proyecto
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </span>
           </a>
+          <h3>[PROYECTO 2] — Fotografía</h3>
+          <p class="carousel-meta">Concepto · 2026 · HTML / CSS / JS</p>
+        </article>
+
+        <article class="carousel-card">
+          <div class="carousel-media carousel-media-empty">
+            <div class="placeholder-image ratio-34" aria-hidden="true"><span>Tu proyecto aquí</span></div>
+            <span class="carousel-index">04</span>
+          </div>
+          <h3>Próximo proyecto</h3>
+          <p class="carousel-meta">Agenda abierta · 2026</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ============ 5. PROCESO ============ -->
+    <section class="process section-pad" id="proceso">
+      <div class="process-intro">
+        <p class="eyebrow eyebrow-gap">Proceso</p>
+        <h2>Cuatro pasos, sin sorpresas.</h2>
+        <p class="process-lede">Sabes en qué etapa vamos, qué necesito de ti y cuándo se entrega. Nada de semanas en silencio.</p>
+      </div>
+
+      <div class="accordion" id="accordion">
+        <div class="accordion-item is-open">
+          <button class="accordion-trigger" aria-expanded="true" aria-controls="step-1" id="step-1-btn">
+            <span class="step-number">01</span><span class="step-title">Brief</span>
+            <span class="accordion-icon" aria-hidden="true"></span>
+          </button>
+          <div class="accordion-panel" id="step-1" role="region" aria-labelledby="step-1-btn">
+            <p>Una llamada o conversación por WhatsApp para entender tu trabajo, tu público y qué quieres lograr. Defino las páginas, el contenido que necesito y un precio cerrado.</p>
+          </div>
         </div>
-        <div class="footer-copy">
-          <p>&copy; 2026 Angel Matamoros. Todos los derechos reservados.</p>
+        <div class="accordion-item">
+          <button class="accordion-trigger" aria-expanded="false" aria-controls="step-2" id="step-2-btn">
+            <span class="step-number">02</span><span class="step-title">Diseño</span>
+            <span class="accordion-icon" aria-hidden="true"></span>
+          </button>
+          <div class="accordion-panel" id="step-2" role="region" aria-labelledby="step-2-btn" hidden>
+            <p>Propongo la dirección visual: tipografía, colores y cómo se presentan tus fotos o tu música. Lo ajustamos juntos antes de escribir código.</p>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <button class="accordion-trigger" aria-expanded="false" aria-controls="step-3" id="step-3-btn">
+            <span class="step-number">03</span><span class="step-title">Desarrollo</span>
+            <span class="accordion-icon" aria-hidden="true"></span>
+          </button>
+          <div class="accordion-panel" id="step-3" role="region" aria-labelledby="step-3-btn" hidden>
+            <p>Construyo el sitio a mano con HTML, CSS y JavaScript. Te comparto un link de vista previa para que lo revises en tu teléfono y en tu computadora.</p>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <button class="accordion-trigger" aria-expanded="false" aria-controls="step-4" id="step-4-btn">
+            <span class="step-number">04</span><span class="step-title">Entrega</span>
+            <span class="accordion-icon" aria-hidden="true"></span>
+          </button>
+          <div class="accordion-panel" id="step-4" role="region" aria-labelledby="step-4-btn" hidden>
+            <p>Publico el sitio en tu dominio con Netlify o Vercel, conecto el formulario y te explico cómo cambiar lo básico. El código es tuyo.</p>
+          </div>
         </div>
       </div>
-    </footer>
+    </section>
 
-    <script src="script.js" defer></script>
-  </body>
+    <!-- ============ 6. STACK ============ -->
+    <section class="stack section-pad" aria-labelledby="stack-title">
+      <div class="stack-body">
+        <p class="eyebrow eyebrow-gap">Stack</p>
+        <h2 id="stack-title">Hecho a mano, sin peso extra.</h2>
+
+        <div class="tabs" role="tablist" aria-label="Herramientas">
+          <button role="tab" id="tab-front" aria-selected="true" aria-controls="panel-front">Frontend</button>
+          <button role="tab" id="tab-deploy" aria-selected="false" aria-controls="panel-deploy" tabindex="-1">Deploy</button>
+          <button role="tab" id="tab-tools" aria-selected="false" aria-controls="panel-tools" tabindex="-1">Herramientas</button>
+        </div>
+
+        <div class="tab-panel" role="tabpanel" id="panel-front" aria-labelledby="tab-front">
+          <p>HTML semántico, CSS moderno y JavaScript puro. Sin frameworks que tu sitio no necesita: menos que descargar, menos que se rompa.</p>
+          <ul class="tab-list"><li>HTML5</li><li>CSS3</li><li>JavaScript</li><li>Diseño responsive</li></ul>
+        </div>
+        <div class="tab-panel" role="tabpanel" id="panel-deploy" aria-labelledby="tab-deploy" hidden>
+          <p>Publicación en hosting moderno con HTTPS y CDN incluidos. Tu sitio queda en tu dominio y cada cambio se publica en minutos.</p>
+          <ul class="tab-list"><li>Netlify</li><li>Vercel</li><li>GitHub Pages</li><li>Dominio propio</li></ul>
+        </div>
+        <div class="tab-panel" role="tabpanel" id="panel-tools" aria-labelledby="tab-tools" hidden>
+          <p>Control de versiones en cada proyecto y un flujo de trabajo asistido con IA para avanzar rápido sin perder el cuidado del detalle.</p>
+          <ul class="tab-list"><li>Git</li><li>GitHub</li><li>Linux</li><li>Desarrollo asistido con IA</li></ul>
+        </div>
+      </div>
+
+      <figure class="code-figure" aria-label="Fragmento del código de este sitio">
+        <div class="code-window">
+          <div class="code-bar"><span></span><span></span><span></span><em>styles.css</em></div>
+<pre><code><span class="c-sel">:root</span>{
+  <span class="c-prop">--navy</span>:<span class="c-val">#1B2638</span>;
+  <span class="c-prop">--chalk</span>:<span class="c-val">#F5F2EC</span>;
+  <span class="c-prop">--camel</span>:<span class="c-val">#C19A6B</span>;
+  <span class="c-prop">--oxblood</span>:<span class="c-val">#6E1F24</span>;
+}
+
+<span class="c-sel">h2</span>{
+  <span class="c-prop">font-family</span>:<span class="c-val">var(--display-font)</span>;
+  <span class="c-prop">font-size</span>:<span class="c-val">clamp(48px,5.7vw,96px)</span>;
+  <span class="c-prop">letter-spacing</span>:<span class="c-val">-.045em</span>;
+}</code></pre>
+        </div>
+        <figcaption class="image-caption"><span>06 / Este sitio</span><span>Hecho a mano</span></figcaption>
+      </figure>
+    </section>
+
+    <!-- ============ 7. SERVICIOS ============ -->
+    <section class="services section-pad" id="servicios">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow eyebrow-gap">Servicios</p>
+          <h2>Paquetes</h2>
+        </div>
+        <div class="heading-aside">
+          <p>Precio cerrado desde el brief. Cada paquete incluye diseño, desarrollo, versión móvil y publicación.</p>
+        </div>
+      </div>
+
+      <ol class="service-list">
+        <li>
+          <a href="#contacto" class="service-row">
+            <span class="service-num">01</span>
+            <span class="service-name">Landing page</span>
+            <span class="service-desc">Una página para un lanzamiento, un evento o un servicio.</span>
+            <span class="service-price"><small>desde</small> $[___]</span>
+          </a>
+        </li>
+        <li>
+          <a href="#contacto" class="service-row">
+            <span class="service-num">02</span>
+            <span class="service-name">Sitio portafolio</span>
+            <span class="service-desc">Para fotógrafos, músicos y artistas. Galería, sobre mí y contacto.</span>
+            <span class="service-price"><small>desde</small> $[___]</span>
+          </a>
+        </li>
+        <li>
+          <a href="#contacto" class="service-row">
+            <span class="service-num">03</span>
+            <span class="service-name">Invitación digital</span>
+            <span class="service-desc">Bodas, quinceañeras y eventos, con confirmación de asistencia.</span>
+            <span class="service-price"><small>desde</small> $[___]</span>
+          </a>
+        </li>
+        <li>
+          <a href="#contacto" class="service-row">
+            <span class="service-num">04</span>
+            <span class="service-name">Mantenimiento</span>
+            <span class="service-desc">Cambios de contenido y ajustes después de la entrega.</span>
+            <span class="service-price"><small>desde</small> $[___]/mes</span>
+          </a>
+        </li>
+      </ol>
+    </section>
+
+    <!-- ============ 8. MANIFIESTO ============ -->
+    <section class="manifesto">
+      <p>Tu sitio no debería parecer una plantilla. Debería sentirse como entrar a tu estudio: con calma, con espacio y con tu trabajo al centro.</p>
+      <span class="monogram" aria-label="AM">AM</span>
+    </section>
+
+    <!-- ============ 9. FAQ ============ -->
+    <section class="faq section-pad" aria-labelledby="faq-title">
+      <div>
+        <p class="eyebrow eyebrow-gap">Preguntas</p>
+        <h2 id="faq-title">Antes de empezar</h2>
+      </div>
+      <div class="faq-list">
+        <details>
+          <summary>¿Cuánto tarda un proyecto?<span class="faq-icon" aria-hidden="true"></span></summary>
+          <p>Depende del paquete. Una landing suele tomar [__] semanas y un portafolio [__] semanas desde que tengo tu contenido. Te doy una fecha concreta en el brief.</p>
+        </details>
+        <details>
+          <summary>¿Necesito tener dominio y hosting?<span class="faq-icon" aria-hidden="true"></span></summary>
+          <p>No. Si ya tienes dominio lo conecto; si no, te ayudo a comprarlo a tu nombre. El hosting en Netlify o Vercel es gratuito para la mayoría de sitios de este tipo.</p>
+        </details>
+        <details>
+          <summary>¿Qué necesito darte?<span class="faq-icon" aria-hidden="true"></span></summary>
+          <p>Tus fotos, música o trabajo, un texto sobre ti y tus datos de contacto. Si no tienes los textos listos, te paso una guía corta para escribirlos.</p>
+        </details>
+        <details>
+          <summary>¿Puedo hacer cambios después?<span class="faq-icon" aria-hidden="true"></span></summary>
+          <p>Sí. Cada paquete incluye una ronda de ajustes después de la entrega. Para cambios continuos está el plan de mantenimiento.</p>
+        </details>
+        <details>
+          <summary>¿Trabajas en remoto?<span class="faq-icon" aria-hidden="true"></span></summary>
+          <p>Sí. Todo el proceso se puede hacer por videollamada, WhatsApp y correo. Trabajo en español y en inglés.</p>
+        </details>
+      </div>
+    </section>
+
+    <!-- ============ 10. CONTACTO ============ -->
+    <section class="contact" id="contacto">
+      <figure class="contact-figure">
+        <!-- <img src="img/contacto.jpg" alt="..."> -->
+        <div class="placeholder-image placeholder-dark" aria-hidden="true"><span>[IMAGEN CONTACTO]</span></div>
+        <figcaption class="image-caption"><span>10 / Contacto</span><span>AMStudio</span></figcaption>
+      </figure>
+
+      <div class="contact-body section-pad">
+        <p class="eyebrow eyebrow-gap">Contacto</p>
+        <h2>¿Tienes un proyecto?</h2>
+        <p class="contact-lede">Cuéntame qué haces y qué necesitas. Te respondo con preguntas, un plan y un precio.</p>
+
+        <a href="https://wa.me/18622828915" class="button button-chalk" target="_blank" rel="noopener">Escríbeme por WhatsApp
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25"><path d="M7 17L17 7M8 7h9v9"/></svg>
+        </a>
+
+        <form class="contact-form" id="contact-form" novalidate>
+          <div class="field">
+            <label for="f-name">Nombre</label>
+            <input id="f-name" name="nombre" type="text" autocomplete="name" required>
+          </div>
+          <div class="field">
+            <label for="f-email">Correo</label>
+            <input id="f-email" name="correo" type="email" autocomplete="email" required>
+          </div>
+          <div class="field field-full">
+            <label for="f-msg">Tu proyecto</label>
+            <textarea id="f-msg" name="mensaje" rows="4" required></textarea>
+          </div>
+          <div class="form-footer">
+            <button type="submit" class="text-link text-link-light">Enviar
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </button>
+            <p class="form-status" id="form-status" role="status"></p>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ 11. FOOTER ============ -->
+  <footer class="site-footer">
+    <p class="footer-wordmark" aria-hidden="true">AMStudio</p>
+    <div class="footer-grid">
+      <div>
+        <p class="eyebrow footer-label">Estudio</p>
+        <p>Diseño y desarrollo web freelance por Angel Matamoros.</p>
+      </div>
+      <div>
+        <p class="eyebrow footer-label">Navegación</p>
+        <ul>
+          <li><a href="#trabajo">Trabajo</a></li>
+          <li><a href="#servicios">Servicios</a></li>
+          <li><a href="#proceso">Proceso</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="eyebrow footer-label">Redes</p>
+        <ul>
+          <li><a href="https://github.com/notxngel" target="_blank" rel="noopener">GitHub</a></li>
+          <li><a href="#">LinkedIn [LINK]</a></li>
+          <li><a href="#">Instagram [LINK]</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="eyebrow footer-label">Email</p>
+        <a href="mailto:contact@ajmatamoros.dev" class="footer-email">contact@ajmatamoros.dev</a>
+      </div>
+    </div>
+    <div class="footer-baseline">
+      <p>© 2026 Angel Matamoros · AMStudio</p>
+      <p>Hecho a mano con HTML, CSS y JS</p>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
 </html>
