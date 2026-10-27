@@ -1,21 +1,26 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Angel Matamoros — Full Stack Engineer | AMStudio</title>
-  <meta name="description" content="Angel Matamoros, full stack engineer freelance. Aplicaciones web, APIs e infraestructura con JavaScript, Node.js y Linux.">
+  <title>Angel Matamoros — Full Stack Engineer in New Jersey | AMStudio</title>
+  <meta name="description" content="Angel Matamoros, freelance full stack engineer in New Jersey. Web applications, APIs and infrastructure with JavaScript, Node.js and Linux. English and Spanish.">
   <meta name="author" content="Angel Matamoros">
   <link rel="canonical" href="https://ajmatamoros.dev/">
+  <link rel="alternate" hreflang="en" href="https://ajmatamoros.dev/">
+  <link rel="alternate" hreflang="es" href="https://ajmatamoros.dev/es/">
+  <link rel="alternate" hreflang="x-default" href="https://ajmatamoros.dev/">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://ajmatamoros.dev/">
   <meta property="og:site_name" content="AMStudio — Angel Matamoros">
   <meta property="og:title" content="Angel Matamoros — Full Stack Engineer">
-  <meta property="og:description" content="Aplicaciones web, APIs e infraestructura con JavaScript, Node.js y Linux.">
+  <meta property="og:description" content="Web applications, APIs and infrastructure with JavaScript, Node.js and Linux.">
   <meta property="og:image" content="https://ajmatamoros.dev/img/og-image.png">
-  <meta property="og:locale" content="es_US">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:locale:alternate" content="es_US">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="theme-color" content="#0F1724">
+  <meta name="color-scheme" content="dark">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -24,118 +29,127 @@
 </head>
 <body>
 
-  <a href="#contenido" class="skip-link">Saltar al contenido</a>
+  <a href="#contenido" class="skip-link">Skip to content</a>
 
   <!-- ================= HEADER ================= -->
   <header class="site-header">
-    <a href="#top" class="wordmark" aria-label="AMStudio, inicio">
+    <a href="#top" class="wordmark" aria-label="AMStudio, back to top">
       <span class="wordmark-name">AMStudio</span>
       <span class="wordmark-sub">Full stack engineer</span>
     </a>
 
-    <nav class="main-nav" aria-label="Principal">
-      <a href="#trabajo">Trabajo</a>
+    <nav class="main-nav" aria-label="Main">
+      <a href="#trabajo">Work</a>
       <a href="#stack">Stack</a>
-      <a href="#servicios">Servicios</a>
-      <a href="#sobre-mi">Sobre mí</a>
-      <a href="#contacto">Contacto</a>
+      <a href="#servicios">Services</a>
+      <a href="#sobre-mi">About</a>
+      <a href="#contacto">Contact</a>
     </nav>
 
-    <a href="#contacto" class="header-cta">Hablemos</a>
-
-    <button class="menu-toggle" id="menu-toggle" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobile-menu">
-      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25" aria-hidden="true"><path d="M3 8h18M3 16h18"/></svg>
-    </button>
+    <div class="header-actions">
+      <nav class="lang-switch" aria-label="Language">
+        <span class="lang-current" aria-current="true"><span aria-hidden="true">EN</span><span class="sr-only">English</span></span>
+        <span class="lang-sep" aria-hidden="true">/</span>
+        <a href="es/" lang="es" hreflang="es"><span aria-hidden="true">ES</span><span class="sr-only">Español</span></a>
+      </nav>
+      <a href="#contacto" class="header-cta">Let’s talk</a>
+      <button class="menu-toggle" id="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu">
+        <span class="sr-only">Open menu</span>
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25" aria-hidden="true" focusable="false"><path d="M3 8h18M3 16h18"/></svg>
+      </button>
+    </div>
   </header>
 
-  <div class="mobile-menu" id="mobile-menu" hidden>
-    <button class="round-button menu-close" id="menu-close" type="button" aria-label="Cerrar menú">
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25" aria-hidden="true"><path d="M5 5l14 14M19 5L5 19"/></svg>
+  <div class="mobile-menu" id="mobile-menu" role="dialog" aria-modal="true" aria-label="Menu" hidden>
+    <button class="round-button menu-close" id="menu-close" type="button">
+      <span class="sr-only">Close menu</span>
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25" aria-hidden="true" focusable="false"><path d="M5 5l14 14M19 5L5 19"/></svg>
     </button>
-    <nav aria-label="Móvil">
-      <a href="#trabajo">Trabajo</a>
+    <nav aria-label="Main">
+      <a href="#trabajo">Work</a>
       <a href="#stack">Stack</a>
-      <a href="#servicios">Servicios</a>
-      <a href="#sobre-mi">Sobre mí</a>
-      <a href="#contacto">Contacto</a>
+      <a href="#servicios">Services</a>
+      <a href="#sobre-mi">About</a>
+      <a href="#contacto">Contact</a>
     </nav>
   </div>
 
-  <main id="contenido">
+  <main id="contenido" tabindex="-1">
 
     <!-- ================= HERO ================= -->
-    <section class="hero" id="top">
+    <section class="hero" id="top" aria-labelledby="hero-title">
       <div class="hero-main">
         <div class="hero-copy">
-          <p class="label label-accent">Full stack engineer — [CIUDAD]</p>
-          <p class="hero-statement">Construyo aplicaciones web completas: interfaz, servidor, APIs y la infraestructura donde corren.</p>
-          <a href="#trabajo" class="text-link">Ver trabajo
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25" aria-hidden="true"><path d="M12 4v16M5 13l7 7 7-7"/></svg>
+          <p class="label label-accent">Full stack engineer — New Jersey</p>
+          <p class="hero-statement">I build complete web applications: the interface, the server, the APIs and the infrastructure they run on.</p>
+          <a href="#trabajo" class="text-link">See my work
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25" aria-hidden="true" focusable="false"><path d="M12 4v16M5 13l7 7 7-7"/></svg>
           </a>
         </div>
-        <img class="hero-avatar" src="img/angel.png" alt="Avatar de Angel Matamoros con los brazos cruzados" width="454" height="652" fetchpriority="high">
+        <img class="hero-avatar" src="img/angel.png" alt="Illustrated avatar of Angel Matamoros with his arms crossed" width="454" height="652" fetchpriority="high">
       </div>
 
       <div class="hero-bottom">
-        <h1 class="hero-name">Angel Matamoros</h1>
+        <h1 class="hero-name" id="hero-title">Angel Matamoros</h1>
         <div class="hero-caption">
-          <span>Disponible para proyectos · 2026</span>
+          <span>Available for projects · 2026</span>
           <span>JavaScript · Node.js · Linux</span>
         </div>
       </div>
     </section>
 
-    <!-- ================= SOBRE MÍ ================= -->
-    <section class="about" id="sobre-mi">
+    <!-- ================= ABOUT ================= -->
+    <section class="about" id="sobre-mi" aria-labelledby="about-title">
       <figure class="about-figure">
         <img src="img/angel.png" alt="" width="454" height="652" loading="lazy">
       </figure>
 
       <div class="about-body section">
-        <p class="label label-accent">01 / Sobre mí</p>
-        <h2>Del navegador al servidor.</h2>
+        <p class="label label-accent">01 / About</p>
+        <h2 id="about-title">From the browser to the server.</h2>
         <div class="about-text">
-          <p>Soy Angel, desarrollador full stack. Trabajo con JavaScript de punta a punta: interfaces en el navegador, lógica y APIs en Node.js, y el despliegue en servidores Linux.</p>
-          <p>Fuera de los proyectos de clientes mantengo mi propio homelab en Fedora: servicios autoalojados, acceso por VPN y seguridad por capas. Es mi laboratorio para aprender infraestructura y seguridad, el camino que sigo hacia el pentesting.</p>
-          <a href="https://github.com/notxngel" class="text-link" target="_blank" rel="noopener">Ver GitHub
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg>
+          <p>I’m Angel, a full stack developer. I work with JavaScript end to end: interfaces in the browser, logic and APIs in Node.js, and deployment on Linux servers.</p>
+          <p>Outside client work I run my own homelab on Fedora: self-hosted services, VPN-only access and layered security. It’s where I learn infrastructure and security, the path I’m following toward penetration testing.</p>
+          <a href="https://github.com/notxngel" class="text-link" target="_blank" rel="noopener">View GitHub<span class="sr-only"> (opens in a new tab)</span>
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25" aria-hidden="true" focusable="false"><path d="M7 17L17 7M8 7h9v9"/></svg>
           </a>
         </div>
         <dl class="about-facts">
-          <div><dt>Enfoque</dt><dd>Frontend · Backend · Infra</dd></div>
-          <div><dt>Interés</dt><dd>Seguridad web</dd></div>
+          <div><dt>Focus</dt><dd>Frontend · Backend · Infra</dd></div>
+          <div><dt>Interest</dt><dd>Web security</dd></div>
+          <div><dt>Based in</dt><dd>New Jersey · Remote</dd></div>
         </dl>
       </div>
     </section>
 
-    <!-- ================= PROYECTOS DESTACADOS ================= -->
+    <!-- ================= FEATURED PROJECTS ================= -->
     <section class="featured" id="trabajo" aria-labelledby="featured-title">
       <div class="section featured-head">
-        <p class="label label-accent">02 / Trabajo</p>
-        <h2 id="featured-title">Proyectos destacados</h2>
+        <p class="label label-accent">02 / Work</p>
+        <h2 id="featured-title">Featured projects</h2>
       </div>
 
       <div class="featured-grid">
-        <article class="project">
+        <article class="project" aria-labelledby="p-cine">
           <div class="project-top">
-            <span class="project-number">01</span>
-            <span class="label">Proyecto personal · En desarrollo</span>
+            <span class="project-number" aria-hidden="true">01</span>
+            <span class="label">Personal project · In progress</span>
           </div>
 
-          <div class="diagram" role="img" aria-label="Arquitectura de Cine: clientes web y Google TV se conectan a Cine, que gestiona el inicio de sesión y se integra con Jellyfin, Sonarr, Radarr y Seerr.">
+          <div class="diagram" role="img" aria-label="Cine architecture: web and Google TV clients connect to Cine, which handles sign-in and integrates with Jellyfin, Sonarr, Radarr and Seerr.">
             <div class="tier">
-              <span class="tier-label">Clientes</span>
+              <span class="tier-label">Clients</span>
               <div class="nodes">
                 <span class="node"><span class="icon" style="--icon:url(img/icons/javascript.svg)"></span>Web</span>
                 <span class="node"><span class="icon" style="--icon:url(img/icons/googletv.svg)"></span>Google TV</span>
               </div>
             </div>
-            <div class="tier tier-core">
+            <div class="tier">
               <span class="tier-label">App</span>
-              <div class="nodes"><span class="node node-core">Cine · Login propio</span></div>
+              <div class="nodes"><span class="node node-core">Cine · Custom sign-in</span></div>
             </div>
             <div class="tier">
-              <span class="tier-label">Integraciones</span>
+              <span class="tier-label">Integrations</span>
               <div class="nodes">
                 <span class="node"><span class="icon" style="--icon:url(img/icons/jellyfin.svg)"></span>Jellyfin</span>
                 <span class="node"><span class="icon" style="--icon:url(img/icons/sonarr.svg)"></span>Sonarr</span>
@@ -146,88 +160,90 @@
           </div>
 
           <div class="project-info">
-            <h3>Cine</h3>
-            <p>Aplicación web y para Google TV que unifica mi servidor multimedia: catálogo, solicitudes y descargas en una sola interfaz, con sistema de inicio de sesión propio.</p>
-            <p class="project-stack">JavaScript · APIs REST · Autenticación</p>
+            <h3 id="p-cine">Cine</h3>
+            <p>A web and Google TV app that brings my media server together: catalog, requests and downloads in one interface, with its own sign-in system.</p>
+            <p class="project-stack">JavaScript · REST APIs · Authentication</p>
           </div>
         </article>
 
-        <article class="project">
+        <article class="project" aria-labelledby="p-biblioteca">
           <div class="project-top">
-            <span class="project-number">02</span>
-            <span class="label">Proyecto personal</span>
+            <span class="project-number" aria-hidden="true">02</span>
+            <span class="label">Personal project</span>
           </div>
 
-          <div class="diagram" role="img" aria-label="Arquitectura de Biblioteca: el navegador entra por la VPN de Tailscale al homelab con Fedora, donde corre Biblioteca con búsqueda asistida por IA.">
+          <div class="diagram" role="img" aria-label="Biblioteca architecture: the browser connects through a Tailscale VPN to a Fedora homelab, where Biblioteca runs with AI-assisted search.">
             <div class="tier">
-              <span class="tier-label">Acceso</span>
-              <div class="nodes"><span class="node">Navegador</span></div>
+              <span class="tier-label">Access</span>
+              <div class="nodes"><span class="node">Browser</span></div>
             </div>
             <div class="tier">
-              <span class="tier-label">Red</span>
+              <span class="tier-label">Network</span>
               <div class="nodes"><span class="node"><span class="icon" style="--icon:url(img/icons/tailscale.svg)"></span>Tailscale · VPN</span></div>
             </div>
             <div class="tier">
-              <span class="tier-label">Servidor</span>
+              <span class="tier-label">Server</span>
               <div class="nodes"><span class="node"><span class="icon" style="--icon:url(img/icons/fedora.svg)"></span>Homelab · Fedora</span></div>
             </div>
-            <div class="tier tier-core">
+            <div class="tier">
               <span class="tier-label">App</span>
-              <div class="nodes"><span class="node node-core">Biblioteca · Búsqueda con IA</span></div>
+              <div class="nodes"><span class="node node-core">Biblioteca · AI search</span></div>
             </div>
           </div>
 
           <div class="project-info">
-            <h3>Biblioteca</h3>
-            <p>Biblioteca de documentación de programación que funciona sin internet, autoalojada en mi homelab y accesible solo por VPN, con búsqueda asistida por IA.</p>
-            <p class="project-stack">Autoalojado · Linux · Redes privadas</p>
+            <h3 id="p-biblioteca">Biblioteca</h3>
+            <p>An offline programming documentation library, self-hosted on my homelab, reachable only over VPN, with AI-assisted search.</p>
+            <p class="project-stack">Self-hosted · Linux · Private networking</p>
           </div>
         </article>
       </div>
     </section>
 
-    <!-- ================= EN DESARROLLO (CARRUSEL) ================= -->
+    <!-- ================= IN PROGRESS (CAROUSEL) ================= -->
     <section class="more-work section" aria-labelledby="more-work-title">
       <div class="section-heading">
         <div>
-          <p class="label label-accent">03 / En desarrollo</p>
-          <h2 id="more-work-title">Lo que estoy construyendo</h2>
+          <p class="label label-accent">03 / In progress</p>
+          <h2 id="more-work-title">What I’m building</h2>
         </div>
         <div class="heading-aside">
-          <p>Proyectos en curso, de la arquitectura al deploy. Cada uno con su repositorio y su stack.</p>
+          <p>Projects underway, from architecture to deploy. Each one with its own repository and stack.</p>
           <div class="carousel-controls">
-            <button class="round-button" type="button" data-carousel="prev" aria-label="Proyecto anterior">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6"/></svg>
+            <button class="round-button" type="button" data-carousel="prev" aria-controls="carousel">
+              <span class="sr-only">Previous project</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25" aria-hidden="true" focusable="false"><path d="M19 12H5M11 6l-6 6 6 6"/></svg>
             </button>
-            <button class="round-button" type="button" data-carousel="next" aria-label="Proyecto siguiente">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            <button class="round-button" type="button" data-carousel="next" aria-controls="carousel">
+              <span class="sr-only">Next project</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
             </button>
           </div>
         </div>
       </div>
 
-      <div class="carousel" id="carousel" tabindex="0" aria-label="Proyectos en desarrollo">
-        <article class="card">
-          <div class="card-media"><span>[CAPTURA]</span><span class="card-index">01</span></div>
-          <h3>[PROYECTO] — Sitio para músico</h3>
-          <p class="card-meta">Concepto · 2026 · [STACK]</p>
-        </article>
-        <article class="card">
-          <div class="card-media"><span>[CAPTURA]</span><span class="card-index">02</span></div>
-          <h3>[PROYECTO] — Portafolio de fotografía</h3>
-          <p class="card-meta">Concepto · 2026 · [STACK]</p>
-        </article>
-        <article class="card">
-          <div class="card-media"><span>[CAPTURA]</span><span class="card-index">03</span></div>
-          <h3>[PROYECTO] — Landing de lanzamiento</h3>
-          <p class="card-meta">Concepto · 2026 · [STACK]</p>
-        </article>
-        <article class="card card-empty">
-          <div class="card-media"><span>Agenda abierta</span><span class="card-index">04</span></div>
-          <h3>Tu proyecto</h3>
-          <p class="card-meta">Disponible · 2026</p>
-        </article>
-      </div>
+      <ul class="carousel" id="carousel" tabindex="0" aria-label="Projects in progress, scrollable">
+        <li class="card">
+          <div class="card-media"><span>[SCREENSHOT]</span><span class="card-index" aria-hidden="true">01</span></div>
+          <h3>[PROJECT] — Musician website</h3>
+          <p class="card-meta">Concept · 2026 · [STACK]</p>
+        </li>
+        <li class="card">
+          <div class="card-media"><span>[SCREENSHOT]</span><span class="card-index" aria-hidden="true">02</span></div>
+          <h3>[PROJECT] — Photography portfolio</h3>
+          <p class="card-meta">Concept · 2026 · [STACK]</p>
+        </li>
+        <li class="card">
+          <div class="card-media"><span>[SCREENSHOT]</span><span class="card-index" aria-hidden="true">03</span></div>
+          <h3>[PROJECT] — Product launch page</h3>
+          <p class="card-meta">Concept · 2026 · [STACK]</p>
+        </li>
+        <li class="card card-empty">
+          <div class="card-media"><span>Open schedule</span><span class="card-index" aria-hidden="true">04</span></div>
+          <h3>Your project</h3>
+          <p class="card-meta">Available · 2026</p>
+        </li>
+      </ul>
     </section>
 
     <!-- ================= STACK ================= -->
@@ -235,11 +251,11 @@
       <div class="section-heading">
         <div>
           <p class="label label-accent">04 / Stack</p>
-          <h2 id="stack-title">Tecnologías</h2>
+          <h2 id="stack-title">Technologies</h2>
         </div>
         <div class="heading-aside">
-          <p>Lo que uso a diario y lo que estoy sumando ahora mismo.</p>
-          <p class="legend"><span class="legend-mark" aria-hidden="true"></span>En aprendizaje activo</p>
+          <p>What I use every day, and what I’m adding right now.</p>
+          <p class="legend"><span class="legend-mark" aria-hidden="true"></span>Actively learning</p>
         </div>
       </div>
 
@@ -250,8 +266,8 @@
             <li class="tile"><span class="icon" style="--icon:url(img/icons/html5.svg)"></span>HTML5</li>
             <li class="tile"><span class="icon" style="--icon:url(img/icons/css.svg)"></span>CSS</li>
             <li class="tile"><span class="icon" style="--icon:url(img/icons/javascript.svg)"></span>JavaScript</li>
-            <li class="tile is-learning"><span class="icon" style="--icon:url(img/icons/react.svg)"></span>React</li>
-            <li class="tile is-learning"><span class="icon" style="--icon:url(img/icons/redux.svg)"></span>Redux</li>
+            <li class="tile is-learning"><span class="icon" style="--icon:url(img/icons/react.svg)"></span>React<span class="sr-only"> (learning)</span></li>
+            <li class="tile is-learning"><span class="icon" style="--icon:url(img/icons/redux.svg)"></span>Redux<span class="sr-only"> (learning)</span></li>
           </ul>
         </div>
 
@@ -259,14 +275,14 @@
           <h3 class="label">Backend</h3>
           <ul class="tiles">
             <li class="tile"><span class="icon" style="--icon:url(img/icons/nodedotjs.svg)"></span>Node.js</li>
-            <li class="tile"><span class="icon-text" aria-hidden="true">{ }</span>APIs REST</li>
-            <li class="tile is-learning"><span class="icon" style="--icon:url(img/icons/express.svg)"></span>Express</li>
-            <li class="tile is-learning"><span class="icon" style="--icon:url(img/icons/postgresql.svg)"></span>PostgreSQL</li>
+            <li class="tile"><span class="icon-text" aria-hidden="true">{ }</span>REST APIs</li>
+            <li class="tile is-learning"><span class="icon" style="--icon:url(img/icons/express.svg)"></span>Express<span class="sr-only"> (learning)</span></li>
+            <li class="tile is-learning"><span class="icon" style="--icon:url(img/icons/postgresql.svg)"></span>PostgreSQL<span class="sr-only"> (learning)</span></li>
           </ul>
         </div>
 
         <div class="stack-group">
-          <h3 class="label">Infraestructura</h3>
+          <h3 class="label">Infrastructure</h3>
           <ul class="tiles">
             <li class="tile"><span class="icon" style="--icon:url(img/icons/linux.svg)"></span>Linux</li>
             <li class="tile"><span class="icon" style="--icon:url(img/icons/fedora.svg)"></span>Fedora</li>
@@ -279,7 +295,7 @@
         </div>
 
         <div class="stack-group">
-          <h3 class="label">Flujo de trabajo</h3>
+          <h3 class="label">Workflow</h3>
           <ul class="tiles">
             <li class="tile"><span class="icon" style="--icon:url(img/icons/git.svg)"></span>Git</li>
             <li class="tile"><span class="icon" style="--icon:url(img/icons/github.svg)"></span>GitHub</li>
@@ -290,105 +306,105 @@
       </div>
     </section>
 
-    <!-- ================= PROCESO ================= -->
+    <!-- ================= PROCESS ================= -->
     <section class="process section" id="proceso" aria-labelledby="process-title">
       <div class="process-intro">
-        <p class="label label-accent">05 / Proceso</p>
-        <h2 id="process-title">Cómo construyo un proyecto.</h2>
-        <p class="lede">Control de versiones desde el primer día, vistas previas en cada etapa y un deploy que se puede repetir.</p>
+        <p class="label label-accent">05 / Process</p>
+        <h2 id="process-title">How I build a project.</h2>
+        <p class="lede">Version control from day one, previews at every stage and a repeatable deploy.</p>
       </div>
 
       <div class="accordion">
         <div class="accordion-item is-open">
           <h3>
             <button class="accordion-trigger" type="button" aria-expanded="true" aria-controls="step-1" id="step-1-btn">
-              <span class="step-number">01</span><span class="step-title">Requisitos y arquitectura</span>
+              <span class="step-number" aria-hidden="true">01</span><span class="step-title">Requirements and architecture</span>
               <span class="plus" aria-hidden="true"></span>
             </button>
           </h3>
           <div class="accordion-panel" id="step-1" role="region" aria-labelledby="step-1-btn">
-            <p>Defino qué tiene que hacer la aplicación, qué datos maneja y qué servicios necesita. De ahí sale el stack, la estructura del proyecto y un precio cerrado.</p>
+            <p>I define what the application needs to do, what data it handles and which services it depends on. That sets the stack, the project structure and a fixed price.</p>
           </div>
         </div>
         <div class="accordion-item">
           <h3>
             <button class="accordion-trigger" type="button" aria-expanded="false" aria-controls="step-2" id="step-2-btn">
-              <span class="step-number">02</span><span class="step-title">Interfaz</span>
+              <span class="step-number" aria-hidden="true">02</span><span class="step-title">Interface</span>
               <span class="plus" aria-hidden="true"></span>
             </button>
           </h3>
           <div class="accordion-panel" id="step-2" role="region" aria-labelledby="step-2-btn" hidden>
-            <p>HTML semántico, CSS responsive y JavaScript para la interacción. Accesible con teclado y lector de pantalla, y probado en móvil desde el inicio.</p>
+            <p>Semantic HTML, responsive CSS and JavaScript for interaction. Keyboard and screen reader accessible, and tested on mobile from the start.</p>
           </div>
         </div>
         <div class="accordion-item">
           <h3>
             <button class="accordion-trigger" type="button" aria-expanded="false" aria-controls="step-3" id="step-3-btn">
-              <span class="step-number">03</span><span class="step-title">Backend e integraciones</span>
+              <span class="step-number" aria-hidden="true">03</span><span class="step-title">Backend and integrations</span>
               <span class="plus" aria-hidden="true"></span>
             </button>
           </h3>
           <div class="accordion-panel" id="step-3" role="region" aria-labelledby="step-3-btn" hidden>
-            <p>Lógica en Node.js, consumo de APIs externas con peticiones HTTP asíncronas, autenticación cuando hace falta y variables de entorno fuera del código.</p>
+            <p>Logic in Node.js, external APIs through asynchronous HTTP requests, authentication when it’s needed and environment variables kept out of the code.</p>
           </div>
         </div>
         <div class="accordion-item">
           <h3>
             <button class="accordion-trigger" type="button" aria-expanded="false" aria-controls="step-4" id="step-4-btn">
-              <span class="step-number">04</span><span class="step-title">Deploy y mantenimiento</span>
+              <span class="step-number" aria-hidden="true">04</span><span class="step-title">Deploy and maintenance</span>
               <span class="plus" aria-hidden="true"></span>
             </button>
           </h3>
           <div class="accordion-panel" id="step-4" role="region" aria-labelledby="step-4-btn" hidden>
-            <p>Publicación en Netlify, Vercel, GitHub Pages o un servidor Linux propio, con HTTPS y dominio. El repositorio y el código quedan a tu nombre.</p>
+            <p>Published on Netlify, Vercel, GitHub Pages or your own Linux server, with HTTPS and your domain. The repository and the code are yours.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ================= SERVICIOS ================= -->
+    <!-- ================= SERVICES ================= -->
     <section class="services section" id="servicios" aria-labelledby="services-title">
       <div class="section-heading">
         <div>
-          <p class="label label-accent">06 / Servicios</p>
-          <h2 id="services-title">Paquetes</h2>
+          <p class="label label-accent">06 / Services</p>
+          <h2 id="services-title">Packages</h2>
         </div>
         <div class="heading-aside">
-          <p>Precio cerrado después de definir requisitos. Cada paquete incluye repositorio en Git, versión móvil y deploy.</p>
+          <p>Fixed price once the requirements are defined. Every package includes a Git repository, a mobile version and deployment.</p>
         </div>
       </div>
 
       <ol class="service-list">
         <li>
           <a href="#contacto" class="service-row">
-            <span class="service-num">01</span>
-            <span class="service-name">Sitio web o landing</span>
-            <span class="service-desc">Responsive, rápido y con formulario de contacto. Publicado en tu dominio con HTTPS.</span>
-            <span class="service-price"><small>desde</small>$[___]</span>
+            <span class="service-num" aria-hidden="true">01</span>
+            <span class="service-name">Website or landing page</span>
+            <span class="service-desc">Responsive, fast and with a contact form. Published on your domain with HTTPS.</span>
+            <span class="service-price"><small>from</small>$[___]</span>
           </a>
         </li>
         <li>
           <a href="#contacto" class="service-row">
-            <span class="service-num">02</span>
-            <span class="service-name">Aplicación web</span>
-            <span class="service-desc">Interfaz más lógica de servidor: inicio de sesión, datos y paneles a medida.</span>
-            <span class="service-price"><small>desde</small>$[___]</span>
+            <span class="service-num" aria-hidden="true">02</span>
+            <span class="service-name">Web application</span>
+            <span class="service-desc">Interface plus server logic: sign-in, data and custom dashboards.</span>
+            <span class="service-price"><small>from</small>$[___]</span>
           </a>
         </li>
         <li>
           <a href="#contacto" class="service-row">
-            <span class="service-num">03</span>
-            <span class="service-name">Integraciones y automatización</span>
-            <span class="service-desc">Conectar tu sitio con APIs de terceros o automatizar tareas repetitivas.</span>
-            <span class="service-price"><small>desde</small>$[___]</span>
+            <span class="service-num" aria-hidden="true">03</span>
+            <span class="service-name">Integrations and automation</span>
+            <span class="service-desc">Connect your site to third-party APIs or automate repetitive tasks.</span>
+            <span class="service-price"><small>from</small>$[___]</span>
           </a>
         </li>
         <li>
           <a href="#contacto" class="service-row">
-            <span class="service-num">04</span>
-            <span class="service-name">Hosting y mantenimiento</span>
-            <span class="service-desc">Deploy, dominio, actualizaciones y cambios después de la entrega.</span>
-            <span class="service-price"><small>desde</small>$[___]/mes</span>
+            <span class="service-num" aria-hidden="true">04</span>
+            <span class="service-name">Hosting and maintenance</span>
+            <span class="service-desc">Deployment, domain, updates and changes after launch.</span>
+            <span class="service-price"><small>from</small>$[___]/mo</span>
           </a>
         </li>
       </ol>
@@ -397,69 +413,77 @@
     <!-- ================= FAQ ================= -->
     <section class="faq section" aria-labelledby="faq-title">
       <div>
-        <p class="label label-accent">07 / Preguntas</p>
-        <h2 id="faq-title">Antes de empezar</h2>
+        <p class="label label-accent">07 / FAQ</p>
+        <h2 id="faq-title">Before we start</h2>
       </div>
       <div class="faq-list">
         <details>
-          <summary>¿Con qué tecnologías trabajas?<span class="plus" aria-hidden="true"></span></summary>
-          <p>JavaScript en todo el stack: HTML, CSS y JS en el frontend, Node.js en el servidor y Linux para infraestructura. Ahora mismo estoy sumando React, Express y PostgreSQL.</p>
+          <summary>What technologies do you work with?<span class="plus" aria-hidden="true"></span></summary>
+          <p>JavaScript across the stack: HTML, CSS and JS on the front end, Node.js on the server and Linux for infrastructure. Right now I’m adding React, Express and PostgreSQL.</p>
         </details>
         <details>
-          <summary>¿Haces solo frontend o también backend?<span class="plus" aria-hidden="true"></span></summary>
-          <p>Ambos. Puedo hacer solo la interfaz si ya tienes un backend, o construir la aplicación completa con su servidor e integraciones.</p>
+          <summary>Do you only do front end, or back end too?<span class="plus" aria-hidden="true"></span></summary>
+          <p>Both. I can build just the interface if you already have a back end, or the full application with its server and integrations.</p>
         </details>
         <details>
-          <summary>¿Dónde se aloja el proyecto?<span class="plus" aria-hidden="true"></span></summary>
-          <p>Sitios estáticos en Netlify, Vercel o GitHub Pages, que son gratuitos para la mayoría de casos. Aplicaciones con servidor, donde mejor encaje según el proyecto.</p>
+          <summary>Where will my project be hosted?<span class="plus" aria-hidden="true"></span></summary>
+          <p>Static sites go on Netlify, Vercel or GitHub Pages, which are free for most cases. Apps with a server go wherever fits the project best.</p>
         </details>
         <details>
-          <summary>¿Cuánto tarda?<span class="plus" aria-hidden="true"></span></summary>
-          <p>Una landing suele tomar [__] semanas y una aplicación web [__] semanas. Te doy una fecha concreta cuando definimos los requisitos.</p>
+          <summary>How long does it take?<span class="plus" aria-hidden="true"></span></summary>
+          <p>A landing page usually takes [__] weeks and a web application [__] weeks. I’ll give you a specific date once we define the requirements.</p>
         </details>
         <details>
-          <summary>¿El código es mío?<span class="plus" aria-hidden="true"></span></summary>
-          <p>Sí. Al terminar te entrego el repositorio completo y los accesos al hosting y al dominio.</p>
+          <summary>Do I own the code?<span class="plus" aria-hidden="true"></span></summary>
+          <p>Yes. When we finish, you get the full repository plus access to the hosting and the domain.</p>
+        </details>
+        <details>
+          <summary>Do you work remotely?<span class="plus" aria-hidden="true"></span></summary>
+          <p>Yes. I’m based in New Jersey and work with clients anywhere, in English and Spanish.</p>
         </details>
       </div>
     </section>
 
-    <!-- ================= CONTACTO ================= -->
+    <!-- ================= CONTACT ================= -->
     <section class="contact" id="contacto" aria-labelledby="contact-title">
       <figure class="contact-figure">
         <img src="img/angel.png" alt="" width="454" height="652" loading="lazy">
       </figure>
 
       <div class="contact-body section">
-        <p class="label label-accent">08 / Contacto</p>
-        <h2 id="contact-title">¿Tienes un proyecto?</h2>
-        <p class="lede">Cuéntame qué necesitas construir. Te respondo con preguntas, una propuesta técnica y un precio.</p>
+        <p class="label label-accent">08 / Contact</p>
+        <h2 id="contact-title">Have a project?</h2>
+        <p class="lede">Tell me what you need to build. I’ll reply with questions, a technical proposal and a price.</p>
 
         <div class="contact-actions">
-          <a href="https://wa.me/18622828915" class="button" target="_blank" rel="noopener">WhatsApp
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg>
+          <a href="https://wa.me/18622828915" class="button" target="_blank" rel="noopener">WhatsApp<span class="sr-only"> (opens in a new tab)</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25" aria-hidden="true" focusable="false"><path d="M7 17L17 7M8 7h9v9"/></svg>
           </a>
           <a href="mailto:contact@ajmatamoros.dev" class="text-link">contact@ajmatamoros.dev</a>
         </div>
 
-        <form class="contact-form" id="contact-form" novalidate>
+        <form class="contact-form" id="contact-form" novalidate aria-describedby="form-note">
+          <p class="form-note" id="form-note">All fields are required.</p>
           <div class="field">
-            <label for="f-name">Nombre</label>
-            <input id="f-name" name="nombre" type="text" autocomplete="name" required>
+            <label for="f-name">Name</label>
+            <input id="f-name" name="name" type="text" autocomplete="name" required aria-describedby="f-name-error">
+            <p class="field-error" id="f-name-error"></p>
           </div>
           <div class="field">
-            <label for="f-email">Correo</label>
-            <input id="f-email" name="correo" type="email" autocomplete="email" required>
+            <label for="f-email">Email</label>
+            <input id="f-email" name="email" type="email" autocomplete="email" inputmode="email" required aria-describedby="f-email-error">
+            <p class="field-error" id="f-email-error"></p>
           </div>
           <div class="field field-full">
-            <label for="f-msg">Tu proyecto</label>
-            <textarea id="f-msg" name="mensaje" rows="4" required></textarea>
+            <label for="f-msg">Your project</label>
+            <textarea id="f-msg" name="message" rows="4" required aria-describedby="f-msg-error"></textarea>
+            <p class="field-error" id="f-msg-error"></p>
           </div>
           <div class="form-footer">
-            <button type="submit" class="text-link">Enviar
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            <button type="submit" class="text-link">Send
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
             </button>
-            <p class="form-status" id="form-status" role="status"></p>
+            <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
           </div>
         </form>
       </div>
@@ -471,33 +495,34 @@
     <p class="footer-wordmark" aria-hidden="true">AMStudio</p>
     <div class="footer-grid">
       <div>
-        <p class="label label-accent">Estudio</p>
-        <p>Desarrollo full stack freelance por Angel Matamoros.</p>
+        <h2 class="label label-accent">Studio</h2>
+        <p>Freelance full stack development by Angel Matamoros, based in New Jersey.</p>
       </div>
-      <div>
-        <p class="label label-accent">Navegación</p>
+      <nav aria-label="Navigation">
+        <h2 class="label label-accent">Navigation</h2>
         <ul>
-          <li><a href="#trabajo">Trabajo</a></li>
+          <li><a href="#trabajo">Work</a></li>
           <li><a href="#stack">Stack</a></li>
-          <li><a href="#servicios">Servicios</a></li>
-          <li><a href="#contacto">Contacto</a></li>
+          <li><a href="#servicios">Services</a></li>
+          <li><a href="#contacto">Contact</a></li>
         </ul>
-      </div>
+      </nav>
       <div>
-        <p class="label label-accent">Redes</p>
+        <h2 class="label label-accent">Social</h2>
         <ul>
-          <li><a href="https://github.com/notxngel" target="_blank" rel="noopener">GitHub</a></li>
-          <li><a href="#">LinkedIn [LINK]</a></li>
-          <li><a href="#">Instagram [LINK]</a></li>
+          <li><a href="https://github.com/notxngel" target="_blank" rel="noopener">GitHub<span class="sr-only"> (opens in a new tab)</span></a></li>
+          <!-- Agregar cuando existan:
+          <li><a href="https://www.linkedin.com/in/..." target="_blank" rel="noopener">LinkedIn</a></li>
+          <li><a href="https://www.instagram.com/..." target="_blank" rel="noopener">Instagram</a></li> -->
         </ul>
       </div>
       <div>
-        <p class="label label-accent">Email</p>
+        <h2 class="label label-accent">Email</h2>
         <a href="mailto:contact@ajmatamoros.dev">contact@ajmatamoros.dev</a>
       </div>
     </div>
     <div class="footer-baseline">
-      <p>© 2026 Angel Matamoros · AMStudio</p>
+      <p>© 2026 Angel Matamoros · AMStudio · New Jersey</p>
       <p>HTML · CSS · JavaScript · GitHub Pages</p>
     </div>
   </footer>
